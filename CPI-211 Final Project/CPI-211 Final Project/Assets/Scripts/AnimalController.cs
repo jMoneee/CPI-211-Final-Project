@@ -33,7 +33,7 @@ public class AnimalController : MonoBehaviour {
             {
                 var moveDist = accelerate * animal_speed * Time.deltaTime;
                 var turnAngle = (turn * turn_speed) * Time.deltaTime;
-                Debug.Log("turn angle: " +turnAngle);
+               // Debug.Log("turn angle: " +turnAngle);
                 transform.Rotate(0, turnAngle, 0);
                 transform.Translate(Vector3.forward * moveDist);
             if (accelerate > 0)

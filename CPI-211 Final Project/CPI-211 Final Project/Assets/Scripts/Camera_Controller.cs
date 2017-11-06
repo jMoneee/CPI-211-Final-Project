@@ -24,7 +24,7 @@ public class Camera_Controller : MonoBehaviour {
         //float desiredAngle = target.transform.eulerAngles.y;
         //Quaternion rotation = Quaternion.Euler(15, desiredAngle, 0);
         
-        transform.Rotate(-cameraVertTurn, cameraHorizTurn, 0);
+        transform.Rotate(0, cameraHorizTurn, 0);
         
 	}
 }

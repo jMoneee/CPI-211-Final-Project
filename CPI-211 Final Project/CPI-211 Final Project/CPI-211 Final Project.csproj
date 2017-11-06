@@ -86,7 +86,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\AnimalController.cs" />
     <Compile Include="Assets\Scripts\Camera_Controller.cs" />
-    <Compile Include="Assets\Scripts\Melee_Range_Active.cs" />
+    <Compile Include="Assets\Scripts\Melee_Left.cs" />
+    <Compile Include="Assets\Scripts\Melee_Right.cs" />
     <Compile Include="Assets\Scripts\Player_Controller.cs" />
     <Compile Include="Assets\Scripts\PlayerCam.cs" />
   </ItemGroup>

@@ -10,12 +10,13 @@ public class Player_Controller : MonoBehaviour {
     public Collider ChariotCollider;//chariot's hitbox
     public int maxHealth;//player's maximum health
     public int animalSpeed;//animal's speed, dependent on animal type
-    private int currentHealth;//current HP
+    public int currentHealth;//current HP
     public int healthBoost;//the amount of HP restored by hitting a health pack
-    public Melee_Range_Active RangeLeft;
-    public Melee_Range_Active RangeRight;
+    public float damage;//damage, calculated based on weapon
+    
 	void Start () {
         currentHealth = maxHealth;
+        damage = 10;//temporary, to be replaced later
         //eventually use the enums assigned to player to populate stats
 	}
 	
@@ -25,14 +26,7 @@ public class Player_Controller : MonoBehaviour {
         {
             Die();
         }
-        if(Input.GetButton("Fire1"))
-        {
-            AttackLeft();
-        }
-        if(Input.GetButton("Fire2"))
-        {
-            AttackRight();
-        }
+       
 	}
 
     private void OnTriggerEnter(Collider other)
@@ -54,22 +48,9 @@ public class Player_Controller : MonoBehaviour {
         transform.position = Vector3.zero;
         currentHealth = maxHealth;
     }
-    private void AttackLeft()
+    public float getDamage()//returns damage
     {
-        Debug.Log("Attack left called");
-        if (RangeLeft.IsActive() )
-        {
-            Debug.Log("Attacking left, left range is active");
-            Destroy(RangeLeft.GetOther());
-        }
+        return damage;
     }
-    private void AttackRight()
-    {
-        Debug.Log("Attack right called");
-        if (RangeRight.IsActive())
-        {
-            Debug.Log("Attacking right, right range is active");
-            Destroy(RangeRight.GetOther());
-        }
-    }
+   
 }
