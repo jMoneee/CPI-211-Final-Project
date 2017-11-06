@@ -21,10 +21,10 @@ MonoBehaviour:
     y: 30
     width: 1366
     height: 635
-  m_MinSize: {x: 705, y: 471}
-  m_MaxSize: {x: 18000, y: 14021}
+  m_MinSize: {x: 713, y: 492}
+  m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 34652
+  controlID: 8005
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -121,10 +121,10 @@ MonoBehaviour:
     y: 0
     width: 816
     height: 635
-  m_MinSize: {x: 230, y: 471}
-  m_MaxSize: {x: 10000, y: 14021}
+  m_MinSize: {x: 232, y: 492}
+  m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 34653
+  controlID: 8006
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -213,9 +213,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.50873274, y: 0.3164366, z: -0.20822637, w: -0.77311105}
   m_Size:
-    m_Target: 10
+    m_Target: 9.12025
     speed: 2
-    m_Value: 10
+    m_Value: 9.12025
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -270,8 +270,8 @@ MonoBehaviour:
     y: 357
     width: 816
     height: 278
-  m_MinSize: {x: 230, y: 250}
-  m_MaxSize: {x: 10000, y: 10000}
+  m_MinSize: {x: 232, y: 271}
+  m_MaxSize: {x: 10002, y: 10021}
   m_ActualView: {fileID: 8}
   m_Panes:
   - {fileID: 8}
@@ -323,13 +323,13 @@ MonoBehaviour:
   - Assets/Scripts
   m_LastFoldersGridSize: 48
   m_LastProjectPath: C:\Users\Brandon\OneDrive\Documents\Video Game Design\CPI211\CPI211FinalProject\CPI-211-Final-Project\CPI-211
-    Final Project
+    Final Project\CPI-211 Final Project
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: da260000
-    m_LastClickedID: 9946
-    m_ExpandedIDs: 0000000034260000e0260000f226000000ca9a3bffffff7f
+    m_SelectedIDs: e22f0000
+    m_LastClickedID: 12258
+    m_ExpandedIDs: 000000007c2f0000683000008230000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -357,7 +357,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000034260000e0260000f226000000ca9a3bffffff7f
+    m_ExpandedIDs: 000000007c2f0000683000008230000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -382,8 +382,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: c613f5ff
-    m_LastClickedInstanceID: -715834
+    m_SelectedInstanceIDs: f6300000
+    m_LastClickedInstanceID: 12534
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 8c260000000000001a22000034050000b02800003e310000
     m_RenameOverlay:
@@ -436,7 +436,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 449
-    width: 1017
+    width: 814
     height: 257
 --- !u!114 &10
 MonoBehaviour:
@@ -456,8 +456,8 @@ MonoBehaviour:
     y: 0
     width: 209
     height: 635
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 11}
   m_Panes:
   - {fileID: 11}
@@ -491,9 +491,9 @@ MonoBehaviour:
     height: 614
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: c613f5ff
-    m_LastClickedID: -715834
-    m_ExpandedIDs: c613f5ffb62bfeffba2bfefff005ffff4c50ffff44eaffff36ecffffbcecffffc0edffffbaeeffffb6ffffff00000000
+    m_SelectedIDs: f6300000
+    m_LastClickedID: 12534
+    m_ExpandedIDs: 8ae0ffff8ce0ffff00000000e8300000f63000000a310000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -568,7 +568,7 @@ MonoBehaviour:
     y: 92
     width: 339
     height: 614
-  m_ScrollPosition: {x: 0, y: 0}
+  m_ScrollPosition: {x: 0, y: 145.95508}
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: 160
