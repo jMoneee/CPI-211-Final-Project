@@ -10,6 +10,8 @@ public class AnimalController : MonoBehaviour {
         // Use this for initialization
         public float animal_speed;
         public float turn_speed;
+        public string HorizontalInput= "P1_Horizontal";
+        public string VerticalInput = "P1_Vertical";
         private Rigidbody myRigidBody;
         public GameObject wheel_left;
         public GameObject wheel_right;
@@ -26,9 +28,9 @@ public class AnimalController : MonoBehaviour {
 
         void FixedUpdate()
         {
-            var turn = Input.GetAxis("Horizontal");
+            var turn = Input.GetAxis(HorizontalInput);
             // Debug.Log(turn);
-            var accelerate = Input.GetAxis("Vertical");
+            var accelerate = Input.GetAxis(VerticalInput);
             if(accelerate >= 0)
             {
                 var moveDist = accelerate * animal_speed * Time.deltaTime;
