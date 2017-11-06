@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 521060676}
   - component: {fileID: 521060675}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Player_Stand_In
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -592,8 +592,8 @@ MonoBehaviour:
   maxHealth: 100
   animalSpeed: 30
   healthBoost: 30
-  RangeLeft: {fileID: 1878373596}
-  RangeRight: {fileID: 1919233675}
+  RangeLeft: {fileID: 1878373601}
+  RangeRight: {fileID: 1919233680}
 --- !u!1 &897198287
 GameObject:
   m_ObjectHideFlags: 0
@@ -740,8 +740,9 @@ GameObject:
   - component: {fileID: 1825969193}
   - component: {fileID: 1825969192}
   - component: {fileID: 1825969191}
+  - component: {fileID: 1825969195}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Dummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -811,6 +812,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1825969195
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1825969190}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1878373596
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,6 +838,7 @@ GameObject:
   - component: {fileID: 1878373599}
   - component: {fileID: 1878373598}
   - component: {fileID: 1878373597}
+  - component: {fileID: 1878373601}
   m_Layer: 0
   m_Name: AttackRangeLeft
   m_TagString: Untagged
@@ -893,6 +910,17 @@ Transform:
   m_Father: {fileID: 790469272}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1878373601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1878373596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4dc44b0b6571ea4085b15d1891da0c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1919233675
 GameObject:
   m_ObjectHideFlags: 0
@@ -904,6 +932,7 @@ GameObject:
   - component: {fileID: 1919233678}
   - component: {fileID: 1919233677}
   - component: {fileID: 1919233676}
+  - component: {fileID: 1919233680}
   m_Layer: 0
   m_Name: AttackRangeRight
   m_TagString: Untagged
@@ -975,6 +1004,17 @@ Transform:
   m_Father: {fileID: 790469272}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1919233680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1919233675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4dc44b0b6571ea4085b15d1891da0c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1987102165
 GameObject:
   m_ObjectHideFlags: 0

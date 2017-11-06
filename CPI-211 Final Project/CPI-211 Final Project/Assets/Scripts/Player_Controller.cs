@@ -12,8 +12,8 @@ public class Player_Controller : MonoBehaviour {
     public int animalSpeed;//animal's speed, dependent on animal type
     private int currentHealth;//current HP
     public int healthBoost;//the amount of HP restored by hitting a health pack
-    public GameObject RangeLeft;
-    public GameObject RangeRight;
+    public Melee_Range_Active RangeLeft;
+    public Melee_Range_Active RangeRight;
 	void Start () {
         currentHealth = maxHealth;
         //eventually use the enums assigned to player to populate stats
@@ -56,10 +56,20 @@ public class Player_Controller : MonoBehaviour {
     }
     private void AttackLeft()
     {
-        
+        Debug.Log("Attack left called");
+        if (RangeLeft.IsActive() )
+        {
+            Debug.Log("Attacking left, left range is active");
+            Destroy(RangeLeft.GetOther());
+        }
     }
     private void AttackRight()
     {
-
+        Debug.Log("Attack right called");
+        if (RangeRight.IsActive())
+        {
+            Debug.Log("Attacking right, right range is active");
+            Destroy(RangeRight.GetOther());
+        }
     }
 }
