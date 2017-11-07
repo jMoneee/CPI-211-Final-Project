@@ -27,7 +27,7 @@ public class Melee_Left : MonoBehaviour
             {
                 collision.GetComponent<Player_Controller>().currentHealth -= (int)player.GetComponent<Player_Controller>().getDamage(); //for now I guess
                 Debug.Log("DAMAGE!! YEAH!");
-                //Player_Controller.soundPlayer.PlayOneShot(Player_Controller.snd_damage);
+                SoundManager.PlaySound("damage");
             }
         }
     }
@@ -36,7 +36,7 @@ public class Melee_Left : MonoBehaviour
         Debug.Log("Left triggered!!");
         active = true;
 
-        //Player_Controller.soundPlayer.PlayOneShot(Player_Controller.snd_swing);
+        SoundManager.PlaySound("swing");
 
 
         Debug.Log("Conditional left Called... checking for player tag");
