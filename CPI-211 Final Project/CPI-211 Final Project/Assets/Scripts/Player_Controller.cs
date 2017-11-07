@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player_Controller : MonoBehaviour {
 
@@ -8,17 +9,29 @@ public class Player_Controller : MonoBehaviour {
     // Made by Brandon Bayles
     public Collider animalCollider;//animal's hitbox
     public Collider ChariotCollider;//chariot's hitbox
-    public int maxHealth;//player's maximum health
+    public int maxHealth = 100;//player's maximum health
     public int animalSpeed;//animal's speed, dependent on animal type
     public int currentHealth;//current HP
     public int healthBoost;//the amount of HP restored by hitting a health pack
     public float damage;//damage, calculated based on weapon
+
+    public Slider healthSlider;//health bar
+    public Slider staminaSlider;//temp, to be used when stamina is used
+
+    public static AudioSource soundPlayer;//plays sounds
+    public static AudioClip snd_swing;//sound of player swinging weapon
+    public static AudioClip snd_damage;//sound of player hitting another player
     
 	void Start () {
         currentHealth = maxHealth;
         damage = 10;//temporary, to be replaced later
         //eventually use the enums assigned to player to populate stats
-	}
+
+        snd_swing = Resources.Load<AudioClip>("weapon_swing");
+        snd_damage = Resources.Load<AudioClip>("damage");
+
+        soundPlayer = GetComponent<AudioSource>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -26,6 +39,8 @@ public class Player_Controller : MonoBehaviour {
         {
             Die();
         }
+
+        healthSlider.value = currentHealth;
        
 	}
 
