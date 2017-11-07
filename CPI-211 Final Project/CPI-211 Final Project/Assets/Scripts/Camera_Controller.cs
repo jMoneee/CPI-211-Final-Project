@@ -9,6 +9,8 @@ public class Camera_Controller : MonoBehaviour {
     // Use this for initialization
     public GameObject target;
     public float cameraRotateSpeed;
+
+    public string player = "P1";
     //Vector3 offset;
     
 	void Start () {
@@ -17,8 +19,8 @@ public class Camera_Controller : MonoBehaviour {
 
     // Update is called once per frame
     void LateUpdate() {
-        float cameraHorizTurn = Input.GetAxis("Mouse X") * cameraRotateSpeed;
-        float cameraVertTurn = Input.GetAxis("Mouse Y") * cameraRotateSpeed;
+        float cameraHorizTurn = Input.GetAxis(""+player+"_Mouse X") * cameraRotateSpeed;
+        float cameraVertTurn = Input.GetAxis("" + player + "_Mouse Y") * cameraRotateSpeed;
         //target.transform.Rotate(0, cameraTurn, 0); //activate for mouse turn to also control character
 
         //float desiredAngle = target.transform.eulerAngles.y;

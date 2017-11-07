@@ -13,6 +13,9 @@ public class AnimalController : MonoBehaviour {
         private Rigidbody myRigidBody;
         public GameObject wheel_left;
         public GameObject wheel_right;
+
+        public string player = "P1";
+
         void Start()
         {
             myRigidBody = GetComponent<Rigidbody>();
@@ -26,9 +29,9 @@ public class AnimalController : MonoBehaviour {
 
         void FixedUpdate()
         {
-            var turn = Input.GetAxis("Horizontal");
+            var turn = Input.GetAxis((""+ player + "_Horizontal"));
             // Debug.Log(turn);
-            var accelerate = Input.GetAxis("Vertical");
+            var accelerate = Input.GetAxis(("" + player + "_Vertical"));
             if(accelerate >= 0)
             {
                 var moveDist = accelerate * animal_speed * Time.deltaTime;

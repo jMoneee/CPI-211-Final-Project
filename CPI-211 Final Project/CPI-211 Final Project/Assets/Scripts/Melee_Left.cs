@@ -7,8 +7,8 @@ public class Melee_Left : MonoBehaviour
     private bool active;
     private GameObject collision;
     public GameObject player;
-    
 
+    public string playerID = "P1";
     // Use this for initialization
     void Start()
     {
@@ -23,7 +23,7 @@ public class Melee_Left : MonoBehaviour
             //if input ... 
             //do damage
             Debug.Log(collision);
-            if (Input.GetButton("Fire1"))
+            if (Input.GetButton(""+playerID+"_Fire1"))
             {
                 collision.GetComponent<Player_Controller>().currentHealth -= (int)player.GetComponent<Player_Controller>().getDamage(); //for now I guess
                 Debug.Log("DAMAGE!! YEAH!");
