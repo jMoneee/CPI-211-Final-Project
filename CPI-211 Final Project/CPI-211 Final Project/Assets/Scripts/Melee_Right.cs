@@ -40,7 +40,7 @@ public class Melee_Right : MonoBehaviour
         SoundManager.PlaySound("swing");
 
         Debug.Log("Conditional right Called... checking for player tag");
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !(other.CompareTag("MeleeRange")))
         {
             Debug.Log("Attacking Right!");
             collision = other.gameObject;

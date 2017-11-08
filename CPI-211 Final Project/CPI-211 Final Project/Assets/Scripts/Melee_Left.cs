@@ -40,7 +40,7 @@ public class Melee_Left : MonoBehaviour
 
 
         Debug.Log("Conditional left Called... checking for player tag");
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !(other.CompareTag("MeleeRange")))
         {
             Debug.Log("Attacking Left!");
             collision = other.gameObject;

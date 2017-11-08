@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Horse
   - Health
+  - MeleeRange
   layers:
   - Default
   - TransparentFX
