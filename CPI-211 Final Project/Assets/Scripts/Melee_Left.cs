@@ -13,6 +13,7 @@ public class Melee_Left : MonoBehaviour
     void Start()
     {
         active = false;
+        Physics.IgnoreLayerCollision(8,8,true );
     }
 
     // Update is called once per frame
@@ -20,14 +21,26 @@ public class Melee_Left : MonoBehaviour
     {
         if (active)
         {
+           Debug.Log("Left Active!");
             //if input ... 
             //do damage
             Debug.Log(collision);
             if (Input.GetButton(""+playerID+"_Fire1"))
             {
-                collision.GetComponent<Player_Controller>().currentHealth -= (int)player.GetComponent<Player_Controller>().getDamage(); //for now I guess
-                Debug.Log("DAMAGE!! YEAH!");
-                SoundManager.PlaySound("damage");
+                Debug.Log("Mouse click detected, entering damage conditional");
+                SoundManager.PlaySound("swing");
+                if (collision.CompareTag("Player"))
+                {
+                    collision.GetComponent<Player_Controller>().currentHealth -= (int)player.GetComponent<Player_Controller>().getDamage(); //for now I guess
+                    Debug.Log("DAMAGE!! YEAH!");
+                    SoundManager.PlaySound("damage");
+                }
+                else if (collision.CompareTag("Horse") || collision.CompareTag("Chariot"))
+                {
+                    collision.GetComponentInParent<Player_Controller>().currentHealth -= (int)player.GetComponent<Player_Controller>().getDamage(); //for now I guess
+                    Debug.Log("DAMAGE!! YEAH!");
+                    SoundManager.PlaySound("damage");
+                }
             }
         }
     }
@@ -36,20 +49,18 @@ public class Melee_Left : MonoBehaviour
         Debug.Log("Left triggered!!");
         active = true;
 
-        SoundManager.PlaySound("swing");
+        
 
-
-        Debug.Log("Conditional left Called... checking for player tag");
-        if (other.CompareTag("Player") && !(other.CompareTag("MeleeRange")))
-        {
-            Debug.Log("Attacking Left!");
+        Debug.Log("Gameobject: " + other.gameObject);
+       
             collision = other.gameObject;
-            Debug.Log(collision);
-        }
+            Debug.Log("Collision: " + collision);
+      
     }
 
     private void OnTriggerExit(Collider other)
     {
+        Debug.Log("Left Inactive!");
         active = false;
         collision = null;
     }
