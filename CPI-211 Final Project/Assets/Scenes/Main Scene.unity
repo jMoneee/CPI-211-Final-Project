@@ -320,6 +320,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1013888644}
+  attackTime: 0
+  weaponSpeed: 8
   playerID: P2
 --- !u!23 &302315699
 MeshRenderer:
@@ -2116,6 +2118,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 790469271}
+  attackTime: 0
+  weaponSpeed: 8
   playerID: P1
 --- !u!1 &1919233675
 GameObject:
@@ -2212,6 +2216,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 790469271}
+  attackTime: 0
+  weaponSpeed: 8
   playerID: P1
 --- !u!1 &1987102165
 GameObject:
@@ -2314,6 +2320,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1013888644}
+  attackTime: 0
+  weaponSpeed: 8
   playerID: P2
 --- !u!23 &2059217427
 MeshRenderer:
