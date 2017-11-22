@@ -27,6 +27,7 @@ public class Melee_Left : MonoBehaviour
         if (Input.GetButton("" + playerID + "_Fire1") && attackTime <= 0)
         {
             Debug.Log("Mouse click detected, entering damage conditional");
+            
             SoundManager.PlaySound("swing");
             attackTime += weaponSpeed;
             //if input ... 
