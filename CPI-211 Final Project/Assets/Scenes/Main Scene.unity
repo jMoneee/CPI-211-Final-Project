@@ -1600,7 +1600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  cameraRotateSpeed: 3
+  cameraRotateSpeed: 4
   player: P2
 --- !u!45 &1289215521
 Skybox:
@@ -1948,7 +1948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  cameraRotateSpeed: 3
+  cameraRotateSpeed: 4
   player: P1
 --- !u!45 &1757025469
 Skybox:
