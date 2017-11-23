@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class Melee_Left : MonoBehaviour
 {
-    private bool active;//flag for when something is within melee range
-    private GameObject collision;//variable for collider within melee range
+    private bool active;
+    private GameObject collision;
     public GameObject player;
-    public float attackTime;//time between swings, when != 0, the player cannot swing
-    public float weaponSpeed;//the amount of time added to attackTime after a player swings. EDIT THIS VALUE TO CHANGE ATTACK SPEED, IT SHOULD BE RELATIVE TO THE WEAPON USED
 
     public string playerID = "P1";
     // Use this for initialization
@@ -16,27 +14,21 @@ public class Melee_Left : MonoBehaviour
     {
         active = false;
         Physics.IgnoreLayerCollision(8,8,true );
-        attackTime = 0;
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        attackTime -= Time.deltaTime;
-        if (Input.GetButton("" + playerID + "_Fire1") && attackTime <= 0)
+        if (active)
         {
-            Debug.Log("Mouse click detected, entering damage conditional");
-            
-            SoundManager.PlaySound("swing");
-            attackTime += weaponSpeed;
+           Debug.Log("Left Active!");
             //if input ... 
-            //check hitbox
-            
-            if (active)
+            //do damage
+            Debug.Log(collision);
+            if (Input.GetButton(""+playerID+"_Fire1"))
             {
-                Debug.Log("Left Active!");
-                Debug.Log(collision);
+                Debug.Log("Mouse click detected, entering damage conditional");
+                SoundManager.PlaySound("swing");
                 if (collision.CompareTag("Player"))
                 {
                     collision.GetComponent<Player_Controller>().currentHealth -= (int)player.GetComponent<Player_Controller>().getDamage(); //for now I guess
