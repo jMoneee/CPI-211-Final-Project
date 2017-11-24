@@ -19,16 +19,18 @@ public class Melee_Right : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (active)
+        if (Input.GetButton("" + playerID + "_Fire2"))
         {
-            Debug.Log("Right Active!");
+            Debug.Log("Mouse click detected, entering damage conditional");
+            SoundManager.PlaySound("swing");
+            
             //if input ... 
             //do damage
             Debug.Log(collision);
-            if (Input.GetButton(""+playerID + "_Fire2"))
+            if (active)
             {
-                Debug.Log("Mouse click detected, entering damage conditional");
-                SoundManager.PlaySound("swing");
+                Debug.Log("Right Active!");
+
                 if (collision.CompareTag("Player"))
                 {
                     collision.GetComponent<Player_Controller>().currentHealth -= (int)player.GetComponent<Player_Controller>().getDamage(); //for now I guess
