@@ -19,17 +19,19 @@ public class Melee_Left : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (active)
+
+        if (Input.GetButton("" + playerID + "_Fire1"))
         {
-           Debug.Log("Left Active!");
+            Debug.Log("Mouse click detected, entering damage conditional");
+            SoundManager.PlaySound("swing");
             //if input ... 
             //do damage
             Debug.Log(collision);
-            if (Input.GetButton(""+playerID+"_Fire1"))
-            {
-                Debug.Log("Mouse click detected, entering damage conditional");
-                SoundManager.PlaySound("swing");
-                if (collision.CompareTag("Player"))
+          
+            if (active)
+                {
+                    Debug.Log("Left Active!");
+                    if (collision.CompareTag("Player"))
                 {
                     collision.GetComponent<Player_Controller>().currentHealth -= (int)player.GetComponent<Player_Controller>().getDamage(); //for now I guess
                     Debug.Log("DAMAGE!! YEAH!");
