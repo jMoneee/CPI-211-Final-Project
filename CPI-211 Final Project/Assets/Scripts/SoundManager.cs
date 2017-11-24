@@ -14,6 +14,8 @@ public class SoundManager : MonoBehaviour {
         snd_swing = Resources.Load<AudioClip>("weapon_swing");
 
         soundPlayer = GetComponent<AudioSource>();
+
+        DontDestroyOnLoad(this.gameObject);
     }
 	
 	// Update is called once per frame
