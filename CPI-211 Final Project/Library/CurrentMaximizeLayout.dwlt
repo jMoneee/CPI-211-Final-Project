@@ -21,10 +21,10 @@ MonoBehaviour:
     y: 30
     width: 1350
     height: 619
-  m_MinSize: {x: 713, y: 492}
-  m_MaxSize: {x: 18008, y: 14042}
+  m_MinSize: {x: 707, y: 471}
+  m_MaxSize: {x: 18002, y: 14021}
   vertical: 0
-  controlID: 1332
+  controlID: 103
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -154,9 +154,9 @@ MonoBehaviour:
     height: 598
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 8e060000
-    m_LastClickedID: 0
-    m_ExpandedIDs: 5efbffff00000000
+    m_SelectedIDs: 2ec6ffff
+    m_LastClickedID: -14802
+    m_ExpandedIDs: 2ec6ffffbed0ffffa2ddffff64eaffff14f6ffff92fbffff0000000072310000ae310000c4310000ce310000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -199,10 +199,10 @@ MonoBehaviour:
     y: 0
     width: 697
     height: 619
-  m_MinSize: {x: 234, y: 492}
-  m_MaxSize: {x: 10004, y: 14042}
+  m_MinSize: {x: 230, y: 471}
+  m_MaxSize: {x: 10000, y: 14021}
   vertical: 1
-  controlID: 1269
+  controlID: 64
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -400,14 +400,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Scripts
   m_LastFoldersGridSize: 48
-  m_LastProjectPath: C:\Users\Brandon\OneDrive\Documents\Video Game Design\CPI211\CPI211FinalProject\CPI-211-Final-Project\CPI-211
-    Final Project
+  m_LastProjectPath: C:\Users\Joe\Documents\GitHub\CPI-211-Final-Project\CPI-211 Final
+    Project
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 282b0000
-    m_LastClickedID: 11048
-    m_ExpandedIDs: 00000000562a000000ca9a3bffffff7f
+    m_SelectedIDs: 162b0000
+    m_LastClickedID: 11030
+    m_ExpandedIDs: 00000000462a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -435,7 +435,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000562a000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000462a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -460,9 +460,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 8e060000
-    m_LastClickedInstanceID: 1678
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 2ec6ffff
+    m_LastClickedInstanceID: -14802
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 8c2600001a22000034050000b02800003e31000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -534,8 +534,8 @@ MonoBehaviour:
     y: 0
     width: 451
     height: 619
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -568,7 +568,7 @@ MonoBehaviour:
     y: 100
     width: 449
     height: 598
-  m_ScrollPosition: {x: 0, y: 156.95508}
+  m_ScrollPosition: {x: 0, y: 0}
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: 160
