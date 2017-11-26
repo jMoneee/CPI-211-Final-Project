@@ -8,10 +8,11 @@ public class Camera_Controller : MonoBehaviour {
     //right now it just gives the player the ability to turn the camera on its y axis
     // Use this for initialization
     public GameObject target;
-    private float cameraRotateSpeed = 4.5f;
+    private float cameraRotateSpeed = 2.5f;
     private float cameraStartAngle;
     private float cameraHorizAngleChange;
     private float cameraVertAngleChange;
+    private Vector3 forwards;
 
     public string player = "P1";
     //Vector3 offset;
@@ -21,29 +22,37 @@ public class Camera_Controller : MonoBehaviour {
         cameraStartAngle = 0;
         cameraHorizAngleChange = 0;
         cameraVertAngleChange = 0;
-        
+       
 	}
 
     // Update is called once per frame
-    void LateUpdate() {
+    void Update() {
         float cameraHorizTurn = Input.GetAxis(""+player+"_Mouse X") * cameraRotateSpeed;
         float cameraVertTurn = Input.GetAxis("" + player + "_Mouse Y") * cameraRotateSpeed;
         //target.transform.Rotate(0, cameraTurn, 0); //activate for mouse turn to also control character
-
+        forwards = Vector3.forward;
         //float desiredAngle = target.transform.eulerAngles.y;
         //Quaternion rotation = Quaternion.Euler(15, desiredAngle, 0);
 
-        
-        
-        if (cameraHorizAngleChange < 30f && cameraHorizAngleChange > -30f )
-        {
-            cameraHorizAngleChange += cameraHorizTurn;
+
+        cameraHorizAngleChange += cameraHorizTurn;
+       // float cameraHorizChangeFromOrigin = cameraStartAngle + cameraHorizAngleChange;
+        //if (cameraHorizChangeFromOrigin < 30f && cameraHorizChangeFromOrigin > -30f )
+        //{
+            
             transform.Rotate(0, cameraHorizTurn, 0);
-        }
-        if ( cameraVertAngleChange < 10f && cameraVertAngleChange > -10f)
-        {
-            transform.Rotate(cameraVertTurn, 0, 0);
-            cameraVertAngleChange += cameraVertTurn;
-        }
+        //}
+        cameraVertAngleChange += cameraVertTurn;
+        //if ( cameraVertAngleChange < 10f && cameraVertAngleChange > -10f)
+       //{
+            
+         //   transform.Rotate(cameraVertTurn, 0, 0);
+           
+       //}
+    }
+    private void LateUpdate()
+    {
+        Vector3 newAngle = Vector3.RotateTowards(transform.forward, target.transform.forward, 0.5f*Time.deltaTime, 0.0f);
+        transform.rotation = Quaternion.LookRotation(newAngle);
     }
 }
