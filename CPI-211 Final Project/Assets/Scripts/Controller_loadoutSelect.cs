@@ -13,12 +13,13 @@ public class Controller_loadoutSelect : MonoBehaviour
 
     void Start()
     {
-        
+        ButtonPanel.SetActive(false);
     }
 
     void Update()
     {
-       
+       if (p1Toggle.isOn && p2Toggle.isOn && p3Toggle.isOn && p4Toggle.isOn) { ButtonPanel.SetActive(true); }
+       else { ButtonPanel.SetActive(false); }
     }
 
     public void SwitchScenesWithButton(string nextScene)
