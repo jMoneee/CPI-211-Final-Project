@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 11716
+  controlID: 2031
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 11717
+  controlID: 1989
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.0037062597, y: -0.5671107, z: -0.0025519885, w: -0.8236292}
     speed: 2
-    m_Value: {x: 0.00370626, y: -0.5671108, z: -0.0025519887, w: -0.82362926}
+    m_Value: {x: -0.0037062594, y: 0.56711066, z: 0.0025519882, w: 0.82362914}
   m_Size:
     m_Target: 10
     speed: 2
@@ -316,20 +316,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Assets/Art
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 69
   m_LastFolders:
-  - Assets/Assets/Art
+  - Assets/Scenes
   m_LastFoldersGridSize: 69
   m_LastProjectPath: C:\Users\Brandon\OneDrive\Documents\Video Game Design\CPI211\CPI211FinalProject\CPI-211-Final-Project\CPI-211
     Final Project
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 52}
-    m_SelectedIDs: dc2c0000
-    m_LastClickedID: 11484
-    m_ExpandedIDs: 000000004a2a0000a82b0000762c0000dc2c000000ca9a3bffffff7f
+    m_SelectedIDs: f8280000
+    m_LastClickedID: 10488
+    m_ExpandedIDs: 00000000922600004428000048290000f429000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -357,7 +357,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000004a2a0000a82b0000762c0000dc2c000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000922600004428000048290000f429000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -382,10 +382,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: beb1faff
-    m_LastClickedInstanceID: -347714
+    m_SelectedInstanceIDs: 082e0000
+    m_LastClickedInstanceID: 11784
     m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: 8c2600001a22000034050000b02800003e31000000000000d6310000
+    m_ExpandedInstanceIDs: 8c2600001a22000034050000b02800003e31000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -409,7 +409,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 145.5}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 69
   m_DirectoriesAreaWidth: 173
 --- !u!114 &9
@@ -456,8 +456,8 @@ MonoBehaviour:
     y: 0
     width: 204
     height: 635
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 11}
   m_Panes:
   - {fileID: 11}
@@ -491,9 +491,9 @@ MonoBehaviour:
     height: 614
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: beb1faff
-    m_LastClickedID: -347714
-    m_ExpandedIDs: 9cb1faffa6b1faffaab1faffbeb1fafff2b1faffd087fbff7688fbff26d6fbffb226fcff7040fcff90fbffff00000000c4320000d8320000f63200001c330000
+    m_SelectedIDs: 082e0000
+    m_LastClickedID: 11784
+    m_ExpandedIDs: c2a7ffff1aa8ffff3ea8ffff40a8ffff16a9ffff74fbffff9afbffffbefbfffff2fbfffffefbffff16fcffff18fcffff1afcffff00000000ec2d0000f22d0000fc2d0000242e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -512,7 +512,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 0}
     m_SearchString: 
   m_ExpandedScenes:
-  - Colosseum Game
+  - Figure8Game
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -568,7 +568,7 @@ MonoBehaviour:
     y: 92
     width: 275
     height: 614
-  m_ScrollPosition: {x: 0, y: 0}
+  m_ScrollPosition: {x: 0, y: 52.95508}
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: 160
