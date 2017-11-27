@@ -290,8 +290,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7db8146485cc644bae49d82db6d13aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animal_speed: 40
-  turn_speed: 70
+  animal_speed: 30
+  turn_speed: 30
   wheel_left: {fileID: 597670807}
   wheel_right: {fileID: 1527073239}
   player: P1
@@ -365,8 +365,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58d5989b148cbb249b0f6804a334156d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1013888644}
-  playerID: P2
+  player: {fileID: 0}
+  playerID: P1
 --- !u!23 &302315699
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -933,7 +933,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae215fdeac45b2c4fb82b8bb7b198aa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCam: {fileID: 1757025466}
+  playerCam: {fileID: 0}
 --- !u!114 &790469274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -945,13 +945,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 265caf61198e3c84eac7ab6f2f3e7b65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animalCollider: {fileID: 296735773}
-  ChariotCollider: {fileID: 762880482}
+  animalCollider: {fileID: 0}
+  ChariotCollider: {fileID: 0}
   maxHealth: 100
   animalSpeed: 30
   currentHealth: 0
-  healthBoost: 30
-  damage: 0
+  healthBoost: 0
+  damage: 5
   healthSlider: {fileID: 108748508}
   staminaSlider: {fileID: 90834844}
 --- !u!65 &790469275
@@ -1290,8 +1290,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7db8146485cc644bae49d82db6d13aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animal_speed: 40
-  turn_speed: 70
+  animal_speed: 30
+  turn_speed: 30
   wheel_left: {fileID: 1353646965}
   wheel_right: {fileID: 578426385}
   player: P2
@@ -1351,13 +1351,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 265caf61198e3c84eac7ab6f2f3e7b65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animalCollider: {fileID: 986419477}
-  ChariotCollider: {fileID: 216987458}
+  animalCollider: {fileID: 0}
+  ChariotCollider: {fileID: 0}
   maxHealth: 100
   animalSpeed: 30
   currentHealth: 0
-  healthBoost: 30
-  damage: 0
+  healthBoost: 0
+  damage: 15
   healthSlider: {fileID: 599879604}
   staminaSlider: {fileID: 1139003931}
 --- !u!114 &1013888646
@@ -1371,7 +1371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae215fdeac45b2c4fb82b8bb7b198aa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCam: {fileID: 1289215519}
+  playerCam: {fileID: 0}
 --- !u!4 &1013888647
 Transform:
   m_ObjectHideFlags: 0
@@ -1547,7 +1547,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 435274c38cbf7144a8f01de79248860f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+  target: {fileID: 2043083605}
+=======
   target: {fileID: 0}
+>>>>>>> master
   player: P2
 --- !u!45 &1289215521
 Skybox:
@@ -1899,7 +1903,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 435274c38cbf7144a8f01de79248860f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+  target: {fileID: 351489971}
+=======
   target: {fileID: 0}
+>>>>>>> master
   player: P1
 --- !u!45 &1757025469
 Skybox:
@@ -2069,7 +2077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58d5989b148cbb249b0f6804a334156d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 790469271}
+  player: {fileID: 0}
   playerID: P1
 --- !u!1 &1919233675
 GameObject:
@@ -2165,7 +2173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4dc44b0b6571ea4085b15d1891da0c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 790469271}
+  player: {fileID: 0}
   playerID: P1
 --- !u!1 &1987102165
 GameObject:
@@ -2267,8 +2275,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4dc44b0b6571ea4085b15d1891da0c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1013888644}
-  playerID: P2
+  player: {fileID: 0}
+  playerID: P1
 --- !u!23 &2059217427
 MeshRenderer:
   m_ObjectHideFlags: 0
