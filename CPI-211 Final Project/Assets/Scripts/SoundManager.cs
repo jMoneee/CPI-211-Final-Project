@@ -30,7 +30,7 @@ public class SoundManager : MonoBehaviour {
         {
             case "swing":
                 {
-                    soundPlayer.PlayOneShot(snd_swing);
+                   soundPlayer.PlayOneShot(snd_swing);
                     break;
                 }
 

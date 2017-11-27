@@ -951,7 +951,7 @@ MonoBehaviour:
   animalSpeed: 30
   currentHealth: 0
   healthBoost: 30
-  damage: 0
+  damage: 15
   healthSlider: {fileID: 108748508}
   staminaSlider: {fileID: 90834844}
 --- !u!65 &790469275
@@ -1357,7 +1357,7 @@ MonoBehaviour:
   animalSpeed: 30
   currentHealth: 0
   healthBoost: 30
-  damage: 0
+  damage: 15
   healthSlider: {fileID: 599879604}
   staminaSlider: {fileID: 1139003931}
 --- !u!114 &1013888646
@@ -1547,7 +1547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 435274c38cbf7144a8f01de79248860f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 2043083605}
   player: P2
 --- !u!45 &1289215521
 Skybox:
@@ -1899,7 +1899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 435274c38cbf7144a8f01de79248860f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 351489971}
   player: P1
 --- !u!45 &1757025469
 Skybox:
