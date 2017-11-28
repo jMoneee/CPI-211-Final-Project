@@ -5,6 +5,7 @@ using UnityEngine;
 public class ChariotManager : MonoBehaviour {
 
     public int selectedChariot = 0;
+    public GameObject animal;
     // Use this for initialization
     void Start() {
         SelectChariot();
@@ -13,8 +14,9 @@ public class ChariotManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        //Vector3 newPos = Vector3.MoveTowards(transform.forward, animal.transform.forward, 0);
+        //transform.Translate(newPos);
+    }
     void SelectChariot()
     {
         int i = 0;
