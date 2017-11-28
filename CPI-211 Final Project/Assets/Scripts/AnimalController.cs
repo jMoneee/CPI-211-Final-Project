@@ -13,6 +13,7 @@ public class AnimalController : MonoBehaviour {
         private Rigidbody myRigidBody;
         public GameObject wheel_left;
         public GameObject wheel_right;
+        
 
         public string player = "P1";
 
@@ -54,11 +55,22 @@ public class AnimalController : MonoBehaviour {
                  //wheel_right.transform.Rotate(0, 0, 10 * animal_speed * Time.deltaTime);
                 //wheel_left.transform.Rotate(0, 0, -10 * (animal_speed) * (Time.deltaTime));
         }
-            
-            
-                
-            
-
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Health"))
+        {
+            if (GetComponentInParent<Player_Controller>().currentHealth < GetComponentInParent<Player_Controller>().maxHealth)
+            {
+                GetComponentInParent<Player_Controller>().Heal();
+                Destroy(other.gameObject);
+            }
             
         }
+    }
+
+
+
+
+
+}
     
