@@ -53,10 +53,7 @@ public class Camera_Controller : MonoBehaviour {
     }
     private void LateUpdate()
     {
-        if (transform.forward != target.transform.forward)
-        {
-            Vector3 newAngle = Vector3.RotateTowards(transform.forward, target.transform.forward, 0.5f * Time.deltaTime, 0.0f);
-            transform.rotation = Quaternion.LookRotation(newAngle);
-        }
+        Vector3 newAngle = Vector3.RotateTowards(transform.forward, target.transform.forward, 0.5f * Time.deltaTime, 0.0f);
+        transform.rotation = Quaternion.LookRotation(newAngle);
     }
 }

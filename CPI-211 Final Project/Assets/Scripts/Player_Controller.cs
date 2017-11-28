@@ -12,7 +12,7 @@ public class Player_Controller : MonoBehaviour {
     public int maxHealth = 100;//player's maximum health
     public int animalSpeed;//animal's speed, dependent on animal type
     public int currentHealth;//current HP
-    public int healthBoost = 30;//the amount of HP restored by hitting a health pack
+    public int healthBoost;//the amount of HP restored by hitting a health pack
     public float damage;//damage, calculated based on weapon
 
     public Slider healthSlider;//health bar
@@ -21,7 +21,6 @@ public class Player_Controller : MonoBehaviour {
     public static AudioSource soundPlayer;//plays sounds
     public static AudioClip snd_swing;//sound of player swinging weapon
     public static AudioClip snd_damage;//sound of player hitting another player
-    public GameObject animal;
     
 	void Start () {
         currentHealth = maxHealth;
@@ -40,19 +39,15 @@ public class Player_Controller : MonoBehaviour {
         {
             Die();
         }
-        //Vector3 newPos = Vector3.MoveTowards(transform.forward, animal.transform.forward, 0);
-        //transform.Translate(newPos);
+
         healthSlider.value = currentHealth;
        
 	}
-   public void Heal()
+
+    private void OnTriggerEnter(Collider other)
     {
-       
-           Debug.Log("Entered health conditional");
-        if (currentHealth != maxHealth)
+        if(other.CompareTag ("Health"))
         {
-            
-            Debug.Log("Health is less than full, activating health pack!");
             if (currentHealth <= maxHealth - healthBoost)
             {
                 currentHealth += healthBoost;//healthboost wont bring back to full
@@ -63,7 +58,6 @@ public class Player_Controller : MonoBehaviour {
             }
         }
     }
-    
     private void Die()
     {
         transform.position = Vector3.zero;
