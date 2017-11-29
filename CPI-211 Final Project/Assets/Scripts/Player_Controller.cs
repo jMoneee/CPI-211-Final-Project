@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Player_Controller : MonoBehaviour {
+public class Player_Controller : MonoBehaviour
+{
 
     // Controls the character's stats and detects pickup collisions
     // Made by Brandon Bayles
@@ -12,7 +13,7 @@ public class Player_Controller : MonoBehaviour {
     public int maxHealth = 100;//player's maximum health
     public int animalSpeed;//animal's speed, dependent on animal type
     public int currentHealth;//current HP
-    public int healthBoost;//the amount of HP restored by hitting a health pack
+    public int healthBoost = 30;//the amount of HP restored by hitting a health pack
     public float damage;//damage, calculated based on weapon
 
     public Slider healthSlider;//health bar
@@ -21,8 +22,10 @@ public class Player_Controller : MonoBehaviour {
     public static AudioSource soundPlayer;//plays sounds
     public static AudioClip snd_swing;//sound of player swinging weapon
     public static AudioClip snd_damage;//sound of player hitting another player
-    
-	void Start () {
+    public GameObject animal;
+
+    void Start()
+    {
         currentHealth = maxHealth;
         damage = 10;//temporary, to be replaced later
         //eventually use the enums assigned to player to populate stats
@@ -32,22 +35,27 @@ public class Player_Controller : MonoBehaviour {
 
         soundPlayer = GetComponent<AudioSource>();
     }
-	
-	// Update is called once per frame
-	void Update () {
-		if(currentHealth <= 0)
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (currentHealth <= 0)
         {
             Die();
         }
-
+        //Vector3 newPos = Vector3.MoveTowards(transform.forward, animal.transform.forward, 0);
+        //transform.Translate(newPos);
         healthSlider.value = currentHealth;
-       
-	}
 
-    private void OnTriggerEnter(Collider other)
+    }
+    public void Heal()
     {
-        if(other.CompareTag ("Health"))
+
+        Debug.Log("Entered health conditional");
+        if (currentHealth != maxHealth)
         {
+
+            Debug.Log("Health is less than full, activating health pack!");
             if (currentHealth <= maxHealth - healthBoost)
             {
                 currentHealth += healthBoost;//healthboost wont bring back to full
@@ -58,6 +66,7 @@ public class Player_Controller : MonoBehaviour {
             }
         }
     }
+
     private void Die()
     {
         transform.position = Vector3.zero;
@@ -67,5 +76,5 @@ public class Player_Controller : MonoBehaviour {
     {
         return damage;
     }
-   
+
 }
