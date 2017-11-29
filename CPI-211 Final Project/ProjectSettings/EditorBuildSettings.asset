@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 0be1bd83c2e21924eb48ad9ed22922af
   - enabled: 0
-    path: 
+    path: Assets/Scenes/Main Scene.unity
     guid: 289b3754e7a891f4bb76d3a7e4b7a596
   - enabled: 0
     path: Assets/Scenes/Options Menu.unity
@@ -35,3 +35,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/End Screen.unity
     guid: cc7182dbdff2b8f41ad5ef6325988116
+  - enabled: 1
+    path: Assets/Scenes/Figure8Game.unity
+    guid: beef2529511a6c044b8c2c8bb961e224
