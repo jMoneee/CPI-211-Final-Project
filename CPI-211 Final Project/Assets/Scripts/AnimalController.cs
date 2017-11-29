@@ -10,10 +10,12 @@ public class AnimalController : MonoBehaviour
 
     // Use this for initialization
     public float animal_speed;
+    public float base_speed;
     public float turn_speed;
     private Rigidbody myRigidBody;
     public GameObject wheel_left;
     public GameObject wheel_right;
+    private float speedBoostTimer;
 
 
     public string player = "P1";
@@ -21,12 +23,23 @@ public class AnimalController : MonoBehaviour
     void Start()
     {
         myRigidBody = GetComponent<Rigidbody>();
+        speedBoostTimer = 0f;
+        base_speed = animal_speed;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        Debug.Log("Speed timer is at: " + speedBoostTimer);
+        if (speedBoostTimer >= 0)
+        {
+            speedBoostTimer -= Time.deltaTime;
+            animal_speed = base_speed * 5;
+        }
+        else if(speedBoostTimer <= 0)
+        {
+            animal_speed = base_speed;
+        }
     }
 
     void FixedUpdate()
@@ -66,6 +79,12 @@ public class AnimalController : MonoBehaviour
                 Destroy(other.gameObject);
             }
 
+        }
+        if(other.CompareTag("Speed"))
+        {
+            Debug.Log("Speed Boost activated");
+            speedBoostTimer += 10;
+            Destroy(other.gameObject);
         }
     }
 }
