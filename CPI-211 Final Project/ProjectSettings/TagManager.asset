@@ -9,6 +9,8 @@ TagManager:
   - MeleeRange
   - Chariot
   - Speed
+  - CaltdropPickup
+  - CaltdropGroup
   layers:
   - Default
   - TransparentFX

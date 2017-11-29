@@ -16,7 +16,9 @@ public class AnimalController : MonoBehaviour
     public GameObject wheel_left;
     public GameObject wheel_right;
     private float speedBoostTimer;
-
+    private bool hasCaltdrops;
+    private bool hasJavelin;
+    public GameObject caltdropGroup;
 
     public string player = "P1";
 
@@ -25,12 +27,14 @@ public class AnimalController : MonoBehaviour
         myRigidBody = GetComponent<Rigidbody>();
         speedBoostTimer = 0f;
         base_speed = animal_speed;
+        hasCaltdrops = false;
+        hasJavelin = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Speed timer is at: " + speedBoostTimer);
+        //Debug.Log("Speed timer is at: " + speedBoostTimer);
         if (speedBoostTimer >= 0)
         {
             speedBoostTimer -= Time.deltaTime;
@@ -39,6 +43,19 @@ public class AnimalController : MonoBehaviour
         else if(speedBoostTimer <= 0)
         {
             animal_speed = base_speed;
+        }
+        if(Input.GetButton("" + player + "_Fire3"))
+        {
+            if(hasCaltdrops)
+            {
+                
+                Instantiate(caltdropGroup, GetComponent<Transform>(), true);
+                hasCaltdrops = false;
+            }
+            else if(hasJavelin)
+            {
+
+            }
         }
     }
 
@@ -84,6 +101,13 @@ public class AnimalController : MonoBehaviour
         {
             Debug.Log("Speed Boost activated");
             speedBoostTimer += 10;
+            Destroy(other.gameObject);
+        }
+        if(other.CompareTag("CaltdropPickup"))
+        {
+            Debug.Log("CaltdropPickup activated");
+            hasJavelin = false;
+            hasCaltdrops = true;
             Destroy(other.gameObject);
         }
     }
