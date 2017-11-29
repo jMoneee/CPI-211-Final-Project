@@ -81,7 +81,7 @@ public class Player_Controller : MonoBehaviour
         return damage;
     }
 
-    public static int getPlacement() { return placement; }
-    public static void setPlacement(int place) { placement = place; }
+    public  int getPlacement() { return placement; }
+    public  void setPlacement(int place) { placement = place; }
 
 }

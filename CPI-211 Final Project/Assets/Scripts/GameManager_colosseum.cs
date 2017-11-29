@@ -31,5 +31,5 @@ public class GameManager_colosseum : MonoBehaviour
 
     public static int getCurrentPlayers() { return currentPlayers; }
     public static void setCurrentPlayers(int players) { currentPlayers = players; }
-    public static GameObject getPlayerFromList(int i) { return startingListOfPlayers[i]; }
+    public static GameObject[] getPlayerFromList() { return startingListOfPlayers; }
 }
