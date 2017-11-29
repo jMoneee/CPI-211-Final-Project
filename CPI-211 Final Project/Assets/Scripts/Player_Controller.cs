@@ -16,6 +16,8 @@ public class Player_Controller : MonoBehaviour
     public int healthBoost = 30;//the amount of HP restored by hitting a health pack
     public float damage;//damage, calculated based on weapon
 
+    private static int placement;
+
     public Slider healthSlider;//health bar
     public Slider staminaSlider;//temp, to be used when stamina is used
 
@@ -26,6 +28,7 @@ public class Player_Controller : MonoBehaviour
 
     void Start()
     {
+        setPlacement(0);
         currentHealth = maxHealth;
         damage = 10;//temporary, to be replaced later
         //eventually use the enums assigned to player to populate stats
@@ -69,12 +72,16 @@ public class Player_Controller : MonoBehaviour
 
     private void Die()
     {
-        transform.position = Vector3.zero;
-        currentHealth = maxHealth;
+        setPlacement(GameManager_colosseum.getCurrentPlayers());
+
     }
+
     public float getDamage()//returns damage
     {
         return damage;
     }
+
+    public static int getPlacement() { return placement; }
+    public static void setPlacement(int place) { placement = place; }
 
 }
