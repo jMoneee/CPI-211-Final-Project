@@ -436,8 +436,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eb79ad2d14c8b44084a0658d8baf3ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingListOfPlayers: []
   listOfPlayers: []
-  leaderboardManager: {fileID: 0}
 --- !u!4 &388792816
 Transform:
   m_ObjectHideFlags: 0
@@ -1358,6 +1358,21 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 1362808227}
+    - target: {fileID: 114171745808425810, guid: 0213b52892f350f40846012180fb99fa,
+        type: 2}
+      propertyPath: player
+      value: P1K
+      objectReference: {fileID: 0}
+    - target: {fileID: 114396377719005854, guid: 0213b52892f350f40846012180fb99fa,
+        type: 2}
+      propertyPath: playerID
+      value: P1K
+      objectReference: {fileID: 0}
+    - target: {fileID: 114160035503974810, guid: 0213b52892f350f40846012180fb99fa,
+        type: 2}
+      propertyPath: playerID
+      value: P1K
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0213b52892f350f40846012180fb99fa, type: 2}
   m_IsPrefabParent: 0

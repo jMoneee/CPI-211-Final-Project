@@ -16,7 +16,7 @@ public class Player_Controller : MonoBehaviour
     public int healthBoost = 30;//the amount of HP restored by hitting a health pack
     public float damage;//damage, calculated based on weapon
 
-    private static int placement;
+    public int placement;
 
     public Slider healthSlider;//health bar
     public Slider staminaSlider;//temp, to be used when stamina is used
@@ -73,6 +73,7 @@ public class Player_Controller : MonoBehaviour
     private void Die()
     {
         setPlacement(GameManager_colosseum.getCurrentPlayers());
+        this.gameObject.SetActive(false);
     }
 
     public float getDamage()//returns damage
@@ -80,7 +81,7 @@ public class Player_Controller : MonoBehaviour
         return damage;
     }
 
-    public  int getPlacement() { return placement; }
-    public  void setPlacement(int place) { placement = place; }
+    public int getPlacement() { return placement; }
+    public void setPlacement(int place) { placement = place; }
 
 }
