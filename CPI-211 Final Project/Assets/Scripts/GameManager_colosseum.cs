@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class GameManager_colosseum : MonoBehaviour
 {
     private static int currentPlayers;
-    public static GameObject[] startingListOfPlayers;
+    public GameObject[] startingListOfPlayers;
+    public static int[] playerScoreList;
     public GameObject[] listOfPlayers;
 
 	// Use this for initialization
@@ -15,6 +16,7 @@ public class GameManager_colosseum : MonoBehaviour
         startingListOfPlayers = GameObject.FindGameObjectsWithTag("Player");
         listOfPlayers = startingListOfPlayers;
         setCurrentPlayers(listOfPlayers.Length);
+        playerScoreList = new int[startingListOfPlayers.Length];
     }
 	
 	// Update is called once per frame
@@ -25,11 +27,19 @@ public class GameManager_colosseum : MonoBehaviour
 
 		if (currentPlayers == 1)
         {
+            SetPlayerList();
             SceneManager.LoadScene("End Screen");
         }
 	}
 
+    void SetPlayerList()
+    {
+        for (int i = 0; i < Controller_playersMenu.getPlayerCount(); i++)
+        { playerScoreList[i] = startingListOfPlayers[i].GetComponent<Player_Controller>().getPlacement(); }
+    }
+
     public static int getCurrentPlayers() { return currentPlayers; }
     public static void setCurrentPlayers(int players) { currentPlayers = players; }
-    public static GameObject[] getPlayerFromList() { return startingListOfPlayers; }
+    public static int[] getPlayerScoreList() { return playerScoreList; }
+
 }

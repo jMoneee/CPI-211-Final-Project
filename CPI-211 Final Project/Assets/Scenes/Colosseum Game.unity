@@ -436,8 +436,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eb79ad2d14c8b44084a0658d8baf3ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingListOfPlayers: []
   listOfPlayers: []
+  leaderboardManager: {fileID: 0}
 --- !u!4 &388792816
 Transform:
   m_ObjectHideFlags: 0
