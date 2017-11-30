@@ -648,7 +648,8 @@ MonoBehaviour:
   turn_speed: 70
   wheel_left: {fileID: 271772177}
   wheel_right: {fileID: 1952161142}
-  player: P1
+  musicPlayer: {fileID: 939161108}
+  player: P1K
 --- !u!1001 &878768452
 Prefab:
   m_ObjectHideFlags: 0
@@ -750,6 +751,115 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0286252, y: 0.025750136, z: 0.028625201}
   m_Center: {x: 0.000000029802322, y: 0, z: 0}
+--- !u!1 &939161107
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 939161109}
+  - component: {fileID: 939161108}
+  m_Layer: 8
+  m_Name: MusicController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &939161108
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 939161107}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 1f428711044f8f141b7caa29d5a9375e, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!4 &939161109
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 939161107}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.7817154, y: 3.4188673, z: -22.931572}
+  m_LocalScale: {x: 4, y: 0.09999992, z: 7}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &947983918
 Prefab:
   m_ObjectHideFlags: 0
@@ -978,6 +1088,7 @@ MonoBehaviour:
   turn_speed: 70
   wheel_left: {fileID: 1353646965}
   wheel_right: {fileID: 578426385}
+  musicPlayer: {fileID: 0}
   player: P2
 --- !u!54 &986419476
 Rigidbody:
@@ -1042,6 +1153,7 @@ MonoBehaviour:
   currentHealth: 0
   healthBoost: 30
   damage: 0
+  placement: 0
   healthSlider: {fileID: 599879604}
   staminaSlider: {fileID: 1139003931}
   animal: {fileID: 0}
@@ -1346,28 +1458,38 @@ Prefab:
     - target: {fileID: 224241278027880798, guid: 0213b52892f350f40846012180fb99fa,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224241278027880798, guid: 0213b52892f350f40846012180fb99fa,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224257053686490588, guid: 0213b52892f350f40846012180fb99fa,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224257053686490588, guid: 0213b52892f350f40846012180fb99fa,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114532279317057426, guid: 0213b52892f350f40846012180fb99fa,
         type: 2}
       propertyPath: target
       value: 
       objectReference: {fileID: 1362808227}
+    - target: {fileID: 114396377719005854, guid: 0213b52892f350f40846012180fb99fa,
+        type: 2}
+      propertyPath: playerID
+      value: P1K
+      objectReference: {fileID: 0}
+    - target: {fileID: 114160035503974810, guid: 0213b52892f350f40846012180fb99fa,
+        type: 2}
+      propertyPath: playerID
+      value: P1K
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114171745808425810, guid: 0213b52892f350f40846012180fb99fa, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0213b52892f350f40846012180fb99fa, type: 2}
