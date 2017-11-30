@@ -16,6 +16,7 @@ public class AnimalController : MonoBehaviour
     public GameObject wheel_left;
     public GameObject wheel_right;
     private float speedBoostTimer;
+    public AudioSource musicPlayer;
 
 
     public string player = "P1";
@@ -82,6 +83,7 @@ public class AnimalController : MonoBehaviour
         }
         if(other.CompareTag("Speed"))
         {
+            musicPlayer.Play();
             Debug.Log("Speed Boost activated");
             speedBoostTimer += 10;
             Destroy(other.gameObject);
