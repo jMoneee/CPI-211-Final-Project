@@ -22,8 +22,17 @@ public class Controller_loadoutSelect : MonoBehaviour
        else { ButtonPanel.SetActive(false); }
     }
 
-    public void SwitchScenesWithButton(string nextScene)
-    { SceneManager.LoadScene(nextScene); }
+    public void ProgressWithButton() //move forward in scene progression
+    {
+        SceneManager.LoadScene("StageSelect Menu");
+        SoundManager.PlaySound("menu-forward");
+    }
+
+    public void DigressWithButton() //move back in scene progression
+    {
+        SceneManager.LoadScene("PlayerSelect Menu");
+        SoundManager.PlaySound("menu-back");
+    }
 
 
 

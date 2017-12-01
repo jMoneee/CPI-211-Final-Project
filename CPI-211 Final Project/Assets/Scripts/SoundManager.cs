@@ -1,17 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SoundManager : MonoBehaviour {
 
-    public static AudioClip snd_damage, snd_swing;
+    public static AudioClip menu_sound1, menu_sound2;
     static AudioSource soundPlayer;
 
 	// Use this for initialization
 	void Start ()
     {
-        snd_damage = Resources.Load<AudioClip>("damage");
-        snd_swing = Resources.Load<AudioClip>("weapon_swing");
+        menu_sound1 = Resources.Load<AudioClip>("MENU A_Select");
+        menu_sound2 = Resources.Load<AudioClip>("MENU A - Back");
 
         soundPlayer = GetComponent<AudioSource>();
 
@@ -21,22 +22,26 @@ public class SoundManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-		
+		if (soundPlayer.isPlaying && (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Colosseum Game") || SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Figure8Game")))
+        { soundPlayer.Stop(); }
+
+        if (!soundPlayer.isPlaying && (SceneManager.GetActiveScene() != SceneManager.GetSceneByName("Colosseum Game") || SceneManager.GetActiveScene() != SceneManager.GetSceneByName("Figure8Game")))
+        { soundPlayer.Play(); }
 	}
 
     public static void PlaySound (string sound)
     {
         switch (sound)
         {
-            case "swing":
+            case "menu-forward":
                 {
-                    //soundPlayer.PlayOneShot(snd_swing);
+                    soundPlayer.PlayOneShot(menu_sound1);
                     break;
                 }
 
-            case "damage":
+            case "menu-back":
                 {
-                    //soundPlayer.PlayOneShot(snd_damage);
+                    soundPlayer.PlayOneShot(menu_sound2);
                     break;
                 }
         }

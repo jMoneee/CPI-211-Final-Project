@@ -1248,7 +1248,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Back to Loadout Select
+  m_Text: Back to Player Select
 --- !u!222 &973446008
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1339,7 +1339,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Loadout Menu
+          m_StringArgument: PlayerSelect Menu
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -1882,6 +1882,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2056450872}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f26938b3557627044ad8fb2858d3bc92, type: 3}
+  m_Script: {fileID: 11500000, guid: 300f2da63ac6a0d4089ac4ae46bd8b0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

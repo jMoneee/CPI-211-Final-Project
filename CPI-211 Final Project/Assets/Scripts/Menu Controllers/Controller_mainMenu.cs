@@ -7,7 +7,10 @@ public class Controller_mainMenu : MonoBehaviour
 {
 
     public void SwitchSceneWithButton(string nextScene)
-    { SceneManager.LoadScene(nextScene);}
+    {
+        SceneManager.LoadScene(nextScene);
+        SoundManager.PlaySound("menu-forward");
+    }
 
     public void QuitGameBtn() { Application.Quit(); }
 }

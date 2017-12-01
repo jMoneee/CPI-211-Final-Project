@@ -21,9 +21,6 @@ public class Player_Controller : MonoBehaviour
     public Slider healthSlider;//health bar
     public Slider staminaSlider;//temp, to be used when stamina is used
 
-    public static AudioSource soundPlayer;//plays sounds
-    public static AudioClip snd_swing;//sound of player swinging weapon
-    public static AudioClip snd_damage;//sound of player hitting another player
     public GameObject animal;
 
     void Start()
@@ -32,11 +29,6 @@ public class Player_Controller : MonoBehaviour
         currentHealth = maxHealth;
         damage = 10;//temporary, to be replaced later
         //eventually use the enums assigned to player to populate stats
-
-        snd_swing = Resources.Load<AudioClip>("weapon_swing");
-        snd_damage = Resources.Load<AudioClip>("damage");
-
-        soundPlayer = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
