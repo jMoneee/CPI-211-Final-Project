@@ -76,6 +76,7 @@ public class AnimalController : MonoBehaviour
         {
             if (GetComponentInParent<Player_Controller>().currentHealth < GetComponentInParent<Player_Controller>().maxHealth)
             {
+                IngameSoundManager.PlaySound("pickup");
                 GetComponentInParent<Player_Controller>().Heal();
                 Destroy(other.gameObject);
             }
@@ -83,7 +84,8 @@ public class AnimalController : MonoBehaviour
         }
         if(other.CompareTag("Speed"))
         {
-            musicPlayer.Play();
+            IngameSoundManager.PlaySound("pickup");
+            //musicPlayer.Play();
             Debug.Log("Speed Boost activated");
             speedBoostTimer += 10;
             Destroy(other.gameObject);

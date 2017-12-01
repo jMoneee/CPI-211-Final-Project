@@ -11,12 +11,16 @@ public class Controller_playersMenu : MonoBehaviour
     {
         setPlayerCount(num);
         SceneManager.LoadScene("Loadout Menu");
+        SoundManager.PlaySound("menu-forward");
     }
 
     public static int getPlayerCount() { return playerCount; }
     public static void setPlayerCount(int count) { playerCount = count; }
 
     public void SwitchSceneWithButton(string nextScene)
-    { SceneManager.LoadScene(nextScene); }
+    {
+        SceneManager.LoadScene(nextScene);
+        SoundManager.PlaySound("menu-back");
+    }
 
 }

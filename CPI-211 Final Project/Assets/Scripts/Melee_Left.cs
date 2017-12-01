@@ -23,7 +23,7 @@ public class Melee_Left : MonoBehaviour
         if (Input.GetButton("" + playerID + "_Fire1"))
         {
             Debug.Log("Mouse click detected, entering damage conditional");
-            SoundManager.PlaySound("swing");
+            IngameSoundManager.PlaySound("swing");
             //if input ... 
             //do damage
             Debug.Log(collision);
