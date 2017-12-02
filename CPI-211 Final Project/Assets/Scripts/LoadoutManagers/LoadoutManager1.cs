@@ -5,8 +5,8 @@ using UnityEngine.UI;
 //use for 2 player canvas
 public class LoadoutManager1 : MonoBehaviour
 {
-    private int P1chariot = 0;
-    private int P1animal = 0;
+    public int P1chariot = 0;
+    public int P1animal = 0;
     private int P2chariot = 0;
     private int P2animal = 0;
     private int P3chariot = 0;
@@ -42,10 +42,7 @@ public class LoadoutManager1 : MonoBehaviour
             P2animal = P2animalDropdown.GetComponent<Dropdown>().value;
 
             LoadoutManager.setP2animal(P2animal);
-            LoadoutManager.setP2chariot(P2chariot);
-
-
-            
+            LoadoutManager.setP2chariot(P2chariot);      
 
     }
 

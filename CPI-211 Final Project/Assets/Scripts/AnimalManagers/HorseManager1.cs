@@ -10,6 +10,7 @@ public class HorseManager1 : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        selectedHorse = LoadoutManager.getP2animal();
         SelectHorse();
 
     }

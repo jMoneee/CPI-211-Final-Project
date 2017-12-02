@@ -33,7 +33,7 @@ public class LoadoutManager2 : MonoBehaviour
     void Update()
     {
         
-        
+        if (Controller_playersMenu.getPlayerCount() > 2){
             P1chariot = P1chariotDropdown.GetComponent<Dropdown>().value;
             P1animal = P1animalDropdown.GetComponent<Dropdown>().value;
 
@@ -53,9 +53,9 @@ public class LoadoutManager2 : MonoBehaviour
 
             LoadoutManager.setP1animal(P3animal);
             LoadoutManager.setP1chariot(P3chariot);
-   
 
 
+        }
 
 
     }

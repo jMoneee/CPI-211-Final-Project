@@ -14,20 +14,40 @@ public class LoadoutManager : MonoBehaviour
     public static int P4chariot = 0;
     public static int P4animal = 0;
 
+    public  int _P1chariot = P1chariot;
+    public  int _P1animal = P1animal;
+    public  int _P2chariot = P2chariot;
+    public  int _P2animal = P2animal;
+    public  int _P3chariot = P3chariot;
+    public  int _P3animal = P3animal;
+    public  int _P4chariot = P4chariot;
+    public  int _P4animal = P4animal;
+
 
     // Use this for initialization
     void Start()
     {
 
-    }
+}
 
     // Update is called once per frame
     void Update()
     {
-      
+        _P1chariot = P1chariot;
+      _P1animal = P1animal;
+      _P2chariot = P2chariot;
+      _P2animal = P2animal;
+      _P3chariot = P3chariot;
+      _P3animal = P3animal;
+      _P4chariot = P4chariot;
+      _P4animal = P4animal;
 
     }
-    
+    private void Awake()
+    {
+        DontDestroyOnLoad(transform.gameObject);
+    }
+
     public static int getP1chariot()
     {
         return P1chariot;

@@ -7,6 +7,7 @@ public class ChariotManager : MonoBehaviour {
     public int selectedChariot = LoadoutManager.getP1chariot();
     // Use this for initialization
     void Start() {
+        selectedChariot = LoadoutManager.getP1chariot();
         SelectChariot();
 
     }

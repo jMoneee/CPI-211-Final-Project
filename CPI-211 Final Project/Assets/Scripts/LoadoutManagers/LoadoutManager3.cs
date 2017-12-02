@@ -34,31 +34,32 @@ public class LoadoutManager3 : MonoBehaviour
     void Update()
     {
 
+        if (Controller_playersMenu.getPlayerCount() > 3)
+        {
+            P1chariot = P1chariotDropdown.GetComponent<Dropdown>().value;
+            P1animal = P1animalDropdown.GetComponent<Dropdown>().value;
 
-        P1chariot = P1chariotDropdown.GetComponent<Dropdown>().value;
-        P1animal = P1animalDropdown.GetComponent<Dropdown>().value;
+            LoadoutManager.setP1animal(P1animal);
+            LoadoutManager.setP1chariot(P1chariot);
 
-        LoadoutManager.setP1animal(P1animal);
-        LoadoutManager.setP1chariot(P1chariot);
+            P2chariot = P2chariotDropdown.GetComponent<Dropdown>().value;
+            P2animal = P2animalDropdown.GetComponent<Dropdown>().value;
 
-        P2chariot = P2chariotDropdown.GetComponent<Dropdown>().value;
-        P2animal = P2animalDropdown.GetComponent<Dropdown>().value;
+            LoadoutManager.setP2animal(P2animal);
+            LoadoutManager.setP2chariot(P2chariot);
 
-        LoadoutManager.setP2animal(P2animal);
-        LoadoutManager.setP2chariot(P2chariot);
+            P3chariot = P3chariotDropdown.GetComponent<Dropdown>().value;
+            P3animal = P3animalDropdown.GetComponent<Dropdown>().value;
 
-        P3chariot = P3chariotDropdown.GetComponent<Dropdown>().value;
-        P3animal = P3animalDropdown.GetComponent<Dropdown>().value;
+            LoadoutManager.setP3animal(P3animal);
+            LoadoutManager.setP3chariot(P3chariot);
 
-        LoadoutManager.setP3animal(P3animal);
-        LoadoutManager.setP3chariot(P3chariot);
+            P2chariot = P4chariotDropdown.GetComponent<Dropdown>().value;
+            P2animal = P4animalDropdown.GetComponent<Dropdown>().value;
 
-        P2chariot = P4chariotDropdown.GetComponent<Dropdown>().value;
-        P2animal = P4animalDropdown.GetComponent<Dropdown>().value;
-
-        LoadoutManager.setP4animal(P4animal);
-        LoadoutManager.setP4chariot(P4chariot);
-
+            LoadoutManager.setP4animal(P4animal);
+            LoadoutManager.setP4chariot(P4chariot);
+        }
 
     }
 }
