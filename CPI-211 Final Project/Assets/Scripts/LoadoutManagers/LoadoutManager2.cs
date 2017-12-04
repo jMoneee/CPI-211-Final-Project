@@ -5,18 +5,15 @@ using UnityEngine.UI;
 //use for 3 player canvas
 public class LoadoutManager2 : MonoBehaviour
 {
-    private int P1chariot = 0;
-    private int P1animal = 0;
-    private int P1weapon = 0;
-    private int P2chariot = 0;
-    private int P2animal = 0;
-    private int P2weapon = 0;
-    private int P3chariot = 0;
-    private int P3animal = 0;
-    private int P3weapon = 0;
-    private int P4chariot = 0;
-    private int P4animal = 0;
-    private int P4weapon = 0;
+    public static int P1chariot = 0;
+    public static int P1animal = 0;
+    public static int P1weapon = 0;
+    public static int P2chariot = 0;
+    public static int P2animal = 0;
+    public static int P2weapon = 0;
+    public static int P3chariot = 0;
+    public static int P3animal = 0;
+    public static int P3weapon = 0;
 
     public Transform P1chariotDropdown;
     public Transform P1animalDropdown;
@@ -66,5 +63,65 @@ public class LoadoutManager2 : MonoBehaviour
         LoadoutManager.setP3weapon(P3weapon);
 
     }
-  
+
+    public static int getChariot(int i)
+    {
+        switch (i)
+        {
+            case 1:
+                return P1chariot;
+                break;
+
+            case 2:
+                return P2chariot;
+                break;
+
+            case 3:
+                return P3chariot;
+                break;
+        }
+
+        return 0;
+    }
+
+    public static int getAnimal(int i)
+    {
+        switch (i)
+        {
+            case 1:
+                return P1animal;
+                break;
+
+            case 2:
+                return P2animal;
+                break;
+
+            case 3:
+                return P3animal;
+                break;
+        }
+
+        return 0;
+    }
+
+    public static int getWeapon(int i)
+    {
+        switch (i)
+        {
+            case 1:
+                return P1weapon;
+                break;
+
+            case 2:
+                return P2weapon;
+                break;
+
+            case 3:
+                return P3animal;
+                break;
+        }
+
+        return 0;
+    }
+
 }

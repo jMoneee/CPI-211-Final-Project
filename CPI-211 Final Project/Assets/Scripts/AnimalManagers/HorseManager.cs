@@ -5,38 +5,37 @@ using UnityEngine;
 
 public class HorseManager : MonoBehaviour
 {
-    //used for Player 1 object
+    public Transform theHorse;
     public int selectedHorse;
     // Use this for initialization
     void Start()
     {
-        if (Player_Controller.getPlayerNumber() == 1) { selectedHorse = LoadoutManager.getP1animal(); }
-        else if (Player_Controller.getPlayerNumber() == 2) { selectedHorse = LoadoutManager.getP2animal(); }
-        else if (Player_Controller.getPlayerNumber() == 3) { selectedHorse = LoadoutManager.getP3animal(); }
-        else if (Player_Controller.getPlayerNumber() == 4) { selectedHorse = LoadoutManager.getP4animal(); }
-        SelectHorse();
+        getHorse();
+
+        theHorse = this.transform.GetChild(selectedHorse);
+        theHorse.gameObject.SetActive(true);
 
     }
 
-    // Update is called once per frame
-    void Update()
+    void getHorse()
     {
-
-    }
-    void SelectHorse()
-    {
-        int i = 0;
-        foreach (Transform chariot in transform)
+        if (Player_Controller.getPlayerNumber() == 1)
         {
-            if (i == selectedHorse)
-            {
-                chariot.gameObject.SetActive(true);
-            }
-            else
-            {
-                chariot.gameObject.SetActive(false);
-            }
-            i++;
+            if (Controller_playersMenu.getPlayerCount() == 2) { selectedHorse = LoadoutManager1.getAnimal(1); }
+            else if (Controller_playersMenu.getPlayerCount() == 3) { selectedHorse = LoadoutManager2.getAnimal(1); }
+            else if (Controller_playersMenu.getPlayerCount() == 4) { selectedHorse = LoadoutManager3.getAnimal(1); }
         }
+        else if (Player_Controller.getPlayerNumber() == 2)
+        {
+            if (Controller_playersMenu.getPlayerCount() == 2) { selectedHorse = LoadoutManager1.getAnimal(2); }
+            else if (Controller_playersMenu.getPlayerCount() == 3) { selectedHorse = LoadoutManager2.getAnimal(2); }
+            else if (Controller_playersMenu.getPlayerCount() == 4) { selectedHorse = LoadoutManager3.getAnimal(2); }
+        }
+        else if (Player_Controller.getPlayerNumber() == 3)
+        {
+            if (Controller_playersMenu.getPlayerCount() == 3) { selectedHorse = LoadoutManager2.getAnimal(3); }
+            else if (Controller_playersMenu.getPlayerCount() == 4) { selectedHorse = LoadoutManager3.getAnimal(3); }
+        }
+        else if (Player_Controller.getPlayerNumber() == 4) { selectedHorse = LoadoutManager3.getAnimal(4); }
     }
 }
