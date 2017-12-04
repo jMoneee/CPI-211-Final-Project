@@ -9,6 +9,7 @@ TagManager:
   - MeleeRange
   - Chariot
   - Speed
+  - Music
   layers:
   - Default
   - TransparentFX

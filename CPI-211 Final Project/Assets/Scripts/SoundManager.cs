@@ -7,6 +7,7 @@ public class SoundManager : MonoBehaviour {
 
     public static AudioClip menu_sound1, menu_sound2;
     static AudioSource soundPlayer;
+    GameObject[] musicPlayers;
 
 	// Use this for initialization
 	void Start ()
@@ -15,6 +16,12 @@ public class SoundManager : MonoBehaviour {
         menu_sound2 = Resources.Load<AudioClip>("MENU A - Back");
 
         soundPlayer = GetComponent<AudioSource>();
+    }
+
+    void Awake()
+    {
+        musicPlayers = GameObject.FindGameObjectsWithTag("Music");
+        if (musicPlayers.Length > 1) { Destroy(this.gameObject); }
 
         DontDestroyOnLoad(this.gameObject);
     }

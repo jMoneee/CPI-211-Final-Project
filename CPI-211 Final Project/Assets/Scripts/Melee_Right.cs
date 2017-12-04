@@ -12,10 +12,13 @@ public class Melee_Right : MonoBehaviour
     public Animator playerAnimator;//put the appropriate player animator here in-engine for combat animation
 
 
-    public string playerID = "P1";
+    public string playerID;
     // Use this for initialization
     void Start()
     {
+        attackSpeed = 10;
+        playerID = "P" + player.GetComponent<Player_Controller>().getPlayerNumberN();
+
         active = false;
         Physics.IgnoreLayerCollision(8, 8, true);
         attackTime = 0;

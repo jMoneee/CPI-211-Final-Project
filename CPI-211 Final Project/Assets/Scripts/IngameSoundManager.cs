@@ -14,8 +14,6 @@ public class IngameSoundManager : MonoBehaviour {
         pickup_sound = Resources.Load<AudioClip>("pickup_sound");
 
         soundPlayer = GetComponent<AudioSource>();
-
-        DontDestroyOnLoad(this.gameObject);
     }
 
     public static void PlaySound(string sound)

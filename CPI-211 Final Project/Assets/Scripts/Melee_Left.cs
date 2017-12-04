@@ -11,10 +11,13 @@ public class Melee_Left : MonoBehaviour
     public float attackSpeed;//EDIT THIS TO CHANGE HOW LONG IT TAKES BETWEEN SWINGS
     public Animator playerAnimator;//put the appropriate player animator here in-engine for combat animation
 
-    public string playerID = "P1";
+    public string playerID;
     // Use this for initialization
     void Start()
     {
+        attackSpeed = 0;
+        playerID = "P" + player.GetComponent<Player_Controller>().getPlayerNumberN() + "K";
+
         active = false;
         Physics.IgnoreLayerCollision(8,8,true );
         attackTime = 0;
@@ -23,6 +26,7 @@ public class Melee_Left : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         Debug.Log("attack time is: " + attackTime);
         if (attackTime > 0)
         {
