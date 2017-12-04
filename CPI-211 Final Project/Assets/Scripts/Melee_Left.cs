@@ -15,10 +15,8 @@ public class Melee_Left : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        if (Player_Controller.getPlayerNumber() == 1) { playerID = "P1"; }
-        else if (Player_Controller.getPlayerNumber() == 2) { playerID = "P2"; }
-        else if (Player_Controller.getPlayerNumber() == 3) { playerID = "P3"; }
-        else if (Player_Controller.getPlayerNumber() == 4) { playerID = "P4"; }
+        attackSpeed = 0;
+        playerID = "P" + player.GetComponent<Player_Controller>().getPlayerNumberN() + "K";
 
         active = false;
         Physics.IgnoreLayerCollision(8,8,true );
@@ -28,6 +26,7 @@ public class Melee_Left : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         Debug.Log("attack time is: " + attackTime);
         if (attackTime > 0)
         {

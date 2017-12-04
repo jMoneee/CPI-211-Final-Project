@@ -16,10 +16,8 @@ public class Melee_Right : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        if (Player_Controller.getPlayerNumber() == 1) { playerID = "P1"; }
-        else if (Player_Controller.getPlayerNumber() == 2) { playerID = "P2"; }
-        else if (Player_Controller.getPlayerNumber() == 3) { playerID = "P3"; }
-        else if (Player_Controller.getPlayerNumber() == 4) { playerID = "P4"; }
+        attackSpeed = 10;
+        playerID = "P" + player.GetComponent<Player_Controller>().getPlayerNumberN();
 
         active = false;
         Physics.IgnoreLayerCollision(8, 8, true);

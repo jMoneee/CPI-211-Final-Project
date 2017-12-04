@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player_Controller : MonoBehaviour
 {
@@ -14,7 +15,11 @@ public class Player_Controller : MonoBehaviour
     public int animalSpeed;//animal's speed, dependent on animal type
     public int currentHealth;//current HP
     public int healthBoost = 30;//the amount of HP restored by hitting a health pack
+
     public float damage;//damage, calculated based on weapon
+    public float defense;//defense from damage, calculated based on chariot
+    public float swingTimer;//time between swings, calculated based on weapon
+    public float hitboxSize;//size of hitboxes, calculated based on chariot
 
     public int placement;
     public int playerNumberN;
@@ -49,7 +54,6 @@ public class Player_Controller : MonoBehaviour
         //Vector3 newPos = Vector3.MoveTowards(transform.forward, animal.transform.forward, 0);
         //transform.Translate(newPos);
         healthSlider.value = currentHealth;
-
     }
     public void Heal()
     {
@@ -76,10 +80,20 @@ public class Player_Controller : MonoBehaviour
         this.gameObject.SetActive(false);
     }
 
-    public float getDamage()//returns damage
+    public void setChariotStats(float _defense, int _hitboxSize)
     {
-        return damage;
+        defense = _defense;
+        hitboxSize = _hitboxSize;
     }
+
+    public void setWeaponStats(float _damage, float _swingTimer)
+    {
+        damage = _damage;
+        swingTimer = _swingTimer;
+    }
+
+    public float getDamage()//returns damage
+    { return damage;  }
 
     public int getPlacement() { return placement; }
     public void setPlacement(int place) { placement = place; }

@@ -39,6 +39,8 @@ public class AnimalController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        LoadoutUpdate();
+
         //Debug.Log("Speed timer is at: " + speedBoostTimer);
         if (speedBoostTimer >= 0)
         {
@@ -100,10 +102,27 @@ public class AnimalController : MonoBehaviour
         if(other.CompareTag("Speed"))
         {
             IngameSoundManager.PlaySound("pickup");
-            //musicPlayer.Play();
             Debug.Log("Speed Boost activated");
             speedBoostTimer += 10;
             Destroy(other.gameObject);
+        }
+    }
+
+    void LoadoutUpdate()
+    {
+        if (this.gameObject.GetComponent<HorseManager>().returnHorse() == 0)
+        {
+            //fill in values for horse
+        }
+
+        else if (this.gameObject.GetComponent<HorseManager>().returnHorse() == 1)
+        {
+            //fill in values for bear
+        }
+
+        else if (this.gameObject.GetComponent<HorseManager>().returnHorse() == 2)
+        {
+            //fill in values for wolf
         }
     }
 }

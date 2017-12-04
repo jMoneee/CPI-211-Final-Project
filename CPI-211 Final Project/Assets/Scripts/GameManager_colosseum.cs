@@ -10,18 +10,15 @@ public class GameManager_colosseum : MonoBehaviour
     public static int[] playerScoreList;
     public GameObject[] listOfPlayers;
 
-    // Use this for initialization
-    void Start()
-    {
-        startingListOfPlayers = GameObject.FindGameObjectsWithTag("Player");
-        listOfPlayers = startingListOfPlayers;
-        setCurrentPlayers(listOfPlayers.Length);
-        playerScoreList = new int[startingListOfPlayers.Length];
-    }
-
     // Update is called once per frame
     void Update()
     {
+        if (startingListOfPlayers.Length == 0)
+        {
+            startingListOfPlayers = GameObject.FindGameObjectsWithTag("Player");
+            currentPlayers = startingListOfPlayers.Length;
+            playerScoreList = new int[startingListOfPlayers.Length];
+        }
         listOfPlayers = GameObject.FindGameObjectsWithTag("Player");
         currentPlayers = listOfPlayers.Length;
 
