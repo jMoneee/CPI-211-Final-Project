@@ -18,6 +18,8 @@ public class AnimalController : MonoBehaviour
     private float speedBoostTimer;
     public AudioSource musicPlayer;
 
+    Animator animator;
+
 
     public string player = "P1";
 
@@ -26,12 +28,13 @@ public class AnimalController : MonoBehaviour
         myRigidBody = GetComponent<Rigidbody>();
         speedBoostTimer = 0f;
         base_speed = animal_speed;
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Speed timer is at: " + speedBoostTimer);
+        //Debug.Log("Speed timer is at: " + speedBoostTimer);
         if (speedBoostTimer >= 0)
         {
             speedBoostTimer -= Time.deltaTime;
@@ -48,6 +51,11 @@ public class AnimalController : MonoBehaviour
         var turn = Input.GetAxis(("" + player + "_Horizontal"));
         // Debug.Log(turn);
         var accelerate = Input.GetAxis(("" + player + "_Vertical"));
+        if(accelerate <= 0)
+        {
+            animator.SetBool("Still", true);
+            animator.SetBool("Forward", false);
+        }
         if (accelerate >= 0)
         {
             var moveDist = accelerate * animal_speed * Time.deltaTime;
@@ -59,6 +67,8 @@ public class AnimalController : MonoBehaviour
             {
                 wheel_right.transform.Rotate(0, 0, -10 * animal_speed * Time.deltaTime);
                 wheel_left.transform.Rotate(0, 0, 10 * (animal_speed) * (Time.deltaTime));
+                animator.SetBool("Forward", true);
+                animator.SetBool("Still", false);
             }
         }
         //  else if (accelerate <0)           reverse direction was causing animal to be flipped. I disabled it, but left in case we decide to bring it back

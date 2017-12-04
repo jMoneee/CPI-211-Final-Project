@@ -7,6 +7,10 @@ public class Melee_Right : MonoBehaviour
     private bool active;
     private GameObject collision;
     public GameObject player;
+    private float attackTime;//attacktime tracks how much time is left till player can swing again
+    public float attackSpeed;//EDIT THIS TO CHANGE HOW LONG IT TAKES BETWEEN SWINGS
+    public Animator playerAnimator;//put the appropriate player animator here in-engine for combat animation
+
 
     public string playerID = "P1";
     // Use this for initialization
@@ -14,22 +18,34 @@ public class Melee_Right : MonoBehaviour
     {
         active = false;
         Physics.IgnoreLayerCollision(8, 8, true);
+        attackTime = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("" + playerID + "_Fire2"))
+        Debug.Log("attack time is: " + attackTime);
+        if (attackTime > 0)
         {
+            attackTime -= Time.deltaTime;
+        }
+        if (Input.GetButton("" + playerID + "_Fire2") && attackTime <= 0)
+        {
+            attackTime += attackSpeed;
+            //playerAnimator.SetBool("still", false);
+            //playerAnimator.SetBool("attack_left", false);
+            //playerAnimator.SetBool("attack_right", true);
+            playerAnimator.Play("Attack_right", 0);
+
             Debug.Log("Mouse click detected, entering damage conditional");
             IngameSoundManager.PlaySound("swing");
             
             //if input ... 
             //do damage
-            Debug.Log(collision);
+           // Debug.Log(collision);
             if (active)
             {
-                Debug.Log("Right Active!");
+               // Debug.Log("Right Active!");
 
                 if (collision.CompareTag("Player"))
                 {
@@ -47,24 +63,30 @@ public class Melee_Right : MonoBehaviour
         }
 
     }
+    private void LateUpdate()
+    {
+       // playerAnimator.SetBool("still", true);
+        //playerAnimator.SetBool("attack_left", false);
+       // playerAnimator.SetBool("attack_right", false);
+    }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Right triggered!!");
+        //Debug.Log("Right triggered!!");
         active = true;
 
 
 
-        Debug.Log("Gameobject: " + other.gameObject);
+       // Debug.Log("Gameobject: " + other.gameObject);
 
         collision = other.gameObject;
-        Debug.Log("Collision: " + collision);
+       // Debug.Log("Collision: " + collision);
     }
 
 
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("Right Inactive!");
+        //Debug.Log("Right Inactive!");
         active = false;
         collision = null;
     }
