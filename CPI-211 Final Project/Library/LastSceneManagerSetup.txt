@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Colosseum Game.unity
+- path: Assets/Scenes/PlayerSelect Menu.unity
   isLoaded: 1
   isActive: 1
