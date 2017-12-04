@@ -170,9 +170,9 @@ ModelImporter:
     4300012: body_MeshPart2
     4300014: body_MeshPart3
     7400000: Player|PlayerAction
-    7400002: still
-    7400004: attackLeft
-    7400006: attackRight
+    7400002: sword_still
+    7400004: sword_attackLeft
+    7400006: sword_attackRight
     9500000: //RootNode
     13700000: body_MeshPart0
     13700002: body_MeshPart1
@@ -234,7 +234,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: still
+      name: sword_still
       takeName: Player|PlayerAction
       firstFrame: 0
       lastFrame: 30
@@ -262,7 +262,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: attackLeft
+      name: sword_attackLeft
       takeName: Player|PlayerAction
       firstFrame: 31
       lastFrame: 61
@@ -290,7 +290,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: attackRight
+      name: sword_attackRight
       takeName: Player|PlayerAction
       firstFrame: 62
       lastFrame: 92

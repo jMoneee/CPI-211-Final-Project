@@ -297,9 +297,9 @@ ModelImporter:
     4300022: body_MeshPart3
     7400000: Player|PlayerAction
     7400002: Armature|ArmatureAction
-    7400004: still
-    7400006: attackLeft
-    7400008: attackRight
+    7400004: whip_still
+    7400006: whip_attackLeft
+    7400008: whip_attackRight
     9500000: //RootNode
     13700000: body_MeshPart0
     13700002: body_MeshPart1
@@ -393,7 +393,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: still
+      name: whip_still
       takeName: Player|PlayerAction
       firstFrame: 0
       lastFrame: 30
@@ -421,7 +421,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: attackLeft
+      name: whip_attackLeft
       takeName: Player|PlayerAction
       firstFrame: 31
       lastFrame: 61
@@ -449,7 +449,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: attackRight
+      name: whip_attackRight
       takeName: Player|PlayerAction
       firstFrame: 62
       lastFrame: 92

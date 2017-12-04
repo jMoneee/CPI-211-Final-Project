@@ -182,9 +182,9 @@ ModelImporter:
     4300016: body_MeshPart2
     4300018: body_MeshPart3
     7400000: Player|PlayerAction
-    7400002: still
-    7400004: attackLeft
-    7400006: attackRight
+    7400002: mace_still
+    7400004: mace_attackLeft
+    7400006: mace_attackRight
     9500000: //RootNode
     13700000: body_MeshPart0
     13700002: body_MeshPart1
@@ -246,7 +246,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: still
+      name: mace_still
       takeName: Player|PlayerAction
       firstFrame: 0
       lastFrame: 30
@@ -274,7 +274,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: attackLeft
+      name: mace_attackLeft
       takeName: Player|PlayerAction
       firstFrame: 31
       lastFrame: 61
@@ -302,7 +302,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: attackRight
+      name: mace_attackRight
       takeName: Player|PlayerAction
       firstFrame: 62
       lastFrame: 92

@@ -42,6 +42,13 @@ ModelImporter:
     4300008: Wood_Curve.001
     4300010: Left_Wood_Curve
     4300012: Right_Wood_Curve
+    6400000: Left_Wood_Curve
+    6400002: Main_Chariot
+    6400004: Right_Wood_Curve
+    6400006: Wheel_Axis
+    6400008: Wheel_Left
+    6400010: Wheel_Right
+    6400012: Wood_Curve.001
     7400000: Wheel_Right|Wheel_LeftAction
     7400002: Wheel_Right|Wheel_RightAction
     7400004: Wheel_Left|Wheel_LeftAction
@@ -76,7 +83,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
