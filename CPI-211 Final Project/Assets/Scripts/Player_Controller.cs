@@ -17,6 +17,8 @@ public class Player_Controller : MonoBehaviour
     public float damage;//damage, calculated based on weapon
 
     public int placement;
+    public int playerNumberN;
+    public static int playerNumber;
 
     public Slider healthSlider;//health bar
     public Slider staminaSlider;//temp, to be used when stamina is used
@@ -25,6 +27,12 @@ public class Player_Controller : MonoBehaviour
 
     void Start()
     {
+        if (this.gameObject.name == "Player 1") { playerNumber = 1; }
+        else if (this.gameObject.name == "Player 2") { playerNumber = 2; }
+        else if (this.gameObject.name == "Player 3") { playerNumber = 3; }
+        else if (this.gameObject.name == "Player 4") { playerNumber = 4; }
+        playerNumberN = playerNumber;
+
         setPlacement(0);
         currentHealth = maxHealth;
         damage = 10;//temporary, to be replaced later
@@ -75,5 +83,7 @@ public class Player_Controller : MonoBehaviour
 
     public int getPlacement() { return placement; }
     public void setPlacement(int place) { placement = place; }
+    public static int getPlayerNumber() { return playerNumber; }
+    public int getPlayerNumberN() { return playerNumberN; }
 
 }

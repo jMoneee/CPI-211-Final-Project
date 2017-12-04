@@ -21,10 +21,15 @@ public class AnimalController : MonoBehaviour
     Animator animator;
 
 
-    public string player = "P1";
+    public string player;
 
     void Start()
     {
+        if (this.transform.parent.name == "Player 1") { player = "P1K"; }
+        if (this.transform.parent.name == "Player 2") { player = "P2"; }
+        if (this.transform.parent.name == "Player 3") { player = "P3"; }
+        if (this.transform.parent.name == "Player 4") { player = "P4"; }
+
         myRigidBody = GetComponent<Rigidbody>();
         speedBoostTimer = 0f;
         base_speed = animal_speed;

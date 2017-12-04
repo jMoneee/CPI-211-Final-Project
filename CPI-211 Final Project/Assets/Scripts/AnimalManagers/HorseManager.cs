@@ -10,7 +10,10 @@ public class HorseManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        selectedHorse = LoadoutManager.getP1animal();
+        if (Player_Controller.getPlayerNumber() == 1) { selectedHorse = LoadoutManager.getP1animal(); }
+        else if (Player_Controller.getPlayerNumber() == 2) { selectedHorse = LoadoutManager.getP2animal(); }
+        else if (Player_Controller.getPlayerNumber() == 3) { selectedHorse = LoadoutManager.getP3animal(); }
+        else if (Player_Controller.getPlayerNumber() == 4) { selectedHorse = LoadoutManager.getP4animal(); }
         SelectHorse();
 
     }
