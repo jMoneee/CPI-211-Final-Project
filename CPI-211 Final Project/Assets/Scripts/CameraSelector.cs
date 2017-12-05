@@ -10,7 +10,7 @@ public class CameraSelector : MonoBehaviour
     void Start()
     {
         players = Controller_playersMenu.getPlayerCount();
-        if (this.gameObject.name == "Player 1")
+        if (this.transform.parent.parent.parent.name == "Player 1")
         {
             if (players == 2)
                 cameraList[0].SetActive(true);
@@ -18,7 +18,7 @@ public class CameraSelector : MonoBehaviour
                 cameraList[1].SetActive(true);
         }
 
-        else if (this.gameObject.name == "Player 2")
+        else if (this.transform.parent.parent.parent.name == "Player 2")
         {
             if (players == 2)
                 cameraList[2].SetActive(true);
@@ -26,9 +26,9 @@ public class CameraSelector : MonoBehaviour
                 cameraList[3].SetActive(true);
         }
 
-        else if (this.gameObject.name == "Player 3")
+        else if (this.transform.parent.parent.parent.name == "Player 3")
             cameraList[4].SetActive(true);
-        else if (this.gameObject.name == "Player 4")
+        else if (this.transform.parent.parent.parent.name == "Player 4")
             cameraList[5].SetActive(true);
     }
 

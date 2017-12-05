@@ -58,8 +58,8 @@ public class LoadoutManager2 : MonoBehaviour
         P3animal = P3animalDropdown.GetComponent<Dropdown>().value;
         P3weapon = P3weaponDropdown.GetComponent<Dropdown>().value;
 
-        LoadoutManager.setP1animal(P3animal);
-        LoadoutManager.setP1chariot(P3chariot);
+        LoadoutManager.setP3animal(P3animal);
+        LoadoutManager.setP3chariot(P3chariot);
         LoadoutManager.setP3weapon(P3weapon);
 
     }
@@ -117,7 +117,7 @@ public class LoadoutManager2 : MonoBehaviour
                 break;
 
             case 3:
-                return P3animal;
+                return P3weapon;
                 break;
         }
 

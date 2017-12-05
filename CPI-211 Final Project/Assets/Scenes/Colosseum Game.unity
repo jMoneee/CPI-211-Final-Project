@@ -682,7 +682,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1683853053}
-  - component: {fileID: 1683853052}
   - component: {fileID: 1683853054}
   m_Layer: 0
   m_Name: PlayerSpawner
@@ -691,17 +690,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1683853052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1683853051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fee41e8017a1bfd42bb813fe5b61e1d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1683853053
 Transform:
   m_ObjectHideFlags: 0
@@ -726,7 +714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a42c9599ecfb9e0428aa7b7fda3b06df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 4481377160768542, guid: 110a81a6086d1194b84372b72f55398c,
+  playerPrefab: {fileID: 4314199402274242, guid: 813bd62060219544d9b3b200b62b8aa1,
     type: 2}
 --- !u!1 &1987102165
 GameObject:

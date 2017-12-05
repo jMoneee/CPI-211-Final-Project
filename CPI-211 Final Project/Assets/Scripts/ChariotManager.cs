@@ -25,24 +25,24 @@ public class ChariotManager : MonoBehaviour {
 
     void getChariot()
     {
-        if (Player_Controller.getPlayerNumber() == 1)
+        if (this.transform.parent.parent.GetComponentInParent<Player_Controller>().getPlayerNumberN() == 1)
         {
             if (Controller_playersMenu.getPlayerCount() == 2) { selectedChariot = LoadoutManager1.getChariot(1); }
             else if (Controller_playersMenu.getPlayerCount() == 3) { selectedChariot = LoadoutManager2.getChariot(1); }
             else if (Controller_playersMenu.getPlayerCount() == 4) { selectedChariot = LoadoutManager3.getChariot(1); }
         }
-        else if (Player_Controller.getPlayerNumber() == 2)
+        else if (this.transform.parent.parent.GetComponentInParent<Player_Controller>().getPlayerNumberN() == 2)
         {
             if (Controller_playersMenu.getPlayerCount() == 2) { selectedChariot = LoadoutManager1.getChariot(2); }
             else if (Controller_playersMenu.getPlayerCount() == 3) { selectedChariot = LoadoutManager2.getChariot(2); }
             else if (Controller_playersMenu.getPlayerCount() == 4) { selectedChariot = LoadoutManager3.getChariot(2); }
         }
-        else if (Player_Controller.getPlayerNumber() == 3)
+        else if (this.transform.parent.parent.GetComponentInParent<Player_Controller>().getPlayerNumberN() == 3)
         {
             if (Controller_playersMenu.getPlayerCount() == 3) { selectedChariot = LoadoutManager2.getChariot(3); }
             else if (Controller_playersMenu.getPlayerCount() == 4) { selectedChariot = LoadoutManager3.getChariot(3); }
         }
-        else if (Player_Controller.getPlayerNumber() == 4) { selectedChariot = LoadoutManager3.getChariot(4); }
+        else if (this.transform.parent.parent.GetComponentInParent<Player_Controller>().getPlayerNumberN() == 4) { selectedChariot = LoadoutManager3.getChariot(4); }
     }
 
     void computeChariotDefense()

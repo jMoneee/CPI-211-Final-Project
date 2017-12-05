@@ -17,25 +17,24 @@ public class PlayerSpawner_Col : MonoBehaviour {
             switch (i)
             {
                 case 1:
-                    spawnLocation = new Vector3(354, 0, 285);
+                    spawnLocation = new Vector3(354, 5, 285);
                     break;
 
                 case 2:
-                    spawnLocation = new Vector3(-353, 0, -261);
+                    spawnLocation = new Vector3(-353, 5, -261);
                     break;
 
                 case 3:
-                    spawnLocation = new Vector3(-353, 0, 285);
+                    spawnLocation = new Vector3(-353, 5, 285);
                     break;
 
                 case 4:
-                    spawnLocation = new Vector3(354, 0, -261);
+                    spawnLocation = new Vector3(354, 5, -261);
                     break;
             }
 
             Object instanceObj = Instantiate(playerPrefab, spawnLocation, Quaternion.identity);
             instanceObj.name = "Player " + i;
-
         }
     }
 }
