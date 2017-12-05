@@ -17,19 +17,19 @@ public class PlayerSpawner_Fig8 : MonoBehaviour
             switch (i)
             {
                 case 1:
-                    spawnLocation = new Vector3(301, 38, 372);
+                    spawnLocation = new Vector3(301, 42, 372);
                     break;
 
                 case 2:
-                    spawnLocation = new Vector3(-248, 38, -354);
+                    spawnLocation = new Vector3(-248, 42, -354);
                     break;
 
                 case 3:
-                    spawnLocation = new Vector3(-248, 38, 372);
+                    spawnLocation = new Vector3(-248, 42, 372);
                     break;
 
                 case 4:
-                    spawnLocation = new Vector3(301, 38, -354);
+                    spawnLocation = new Vector3(301, 42, -354);
                     break;
             }
             Object instanceObj = Instantiate(playerPrefab, spawnLocation, Quaternion.identity);

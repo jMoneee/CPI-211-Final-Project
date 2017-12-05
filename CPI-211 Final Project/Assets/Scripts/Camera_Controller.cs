@@ -19,7 +19,7 @@ public class Camera_Controller : MonoBehaviour
 
     void Start()
     {
-        target = this.gameObject;
+        target = this.transform.parent.gameObject;
 
         if (this.transform.parent.name == "Player 1") { player = "P1K"; }
         if (this.transform.parent.name == "Player 2") { player = "P2"; }
