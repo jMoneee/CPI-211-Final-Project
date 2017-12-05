@@ -16,7 +16,7 @@ public class Melee_Right : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        attackSpeed = 10;
+        attackSpeed = 5;
         playerID = "P" + player.GetComponent<Player_Controller>().getPlayerNumberN();
 
         active = false;

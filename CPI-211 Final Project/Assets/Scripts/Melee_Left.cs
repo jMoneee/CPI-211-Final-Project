@@ -15,8 +15,8 @@ public class Melee_Left : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        attackSpeed = 0;
-        playerID = "P" + player.GetComponent<Player_Controller>().getPlayerNumberN() + "K";
+        attackSpeed = 5;
+        playerID = "P" + player.GetComponent<Player_Controller>().getPlayerNumberN();
 
         active = false;
         Physics.IgnoreLayerCollision(8,8,true );
