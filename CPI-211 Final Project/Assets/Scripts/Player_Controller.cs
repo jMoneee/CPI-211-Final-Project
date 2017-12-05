@@ -26,7 +26,7 @@ public class Player_Controller : MonoBehaviour
     public static int playerNumber;
 
     public Slider healthSlider;//health bar
-    public Slider staminaSlider;//temp, to be used when stamina is used
+    public Slider[] healthSliderOptions;
 
     public GameObject animal;
 
@@ -37,6 +37,8 @@ public class Player_Controller : MonoBehaviour
         else if (this.gameObject.name == "Player 3") { playerNumber = 3; }
         else if (this.gameObject.name == "Player 4") { playerNumber = 4; }
         playerNumberN = playerNumber;
+
+        determineHealthSlider();
 
         setPlacement(0);
         currentHealth = maxHealth;
@@ -80,6 +82,180 @@ public class Player_Controller : MonoBehaviour
         this.gameObject.SetActive(false);
     }
 
+    public void determineHealthSlider()
+    {
+        if (Controller_playersMenu.getPlayerCount() == 2)
+        {
+            switch (LoadoutManager1.getAnimal(playerNumber))
+            {
+                case 0:
+                    if (playerNumber == 1)
+                    {
+                        healthSlider = healthSliderOptions[0];
+                    }
+
+                    else if (playerNumber == 2)
+                    {
+                        healthSlider = healthSliderOptions[2];
+                    }
+                    break;
+
+                case 1:
+                    if (playerNumber == 1)
+                    {
+                        healthSlider = healthSliderOptions[6];
+                    }
+
+                    else if (playerNumber == 2)
+                    {
+                        healthSlider = healthSliderOptions[8];
+                    }
+                    break;
+
+                case 2:
+                    if (playerNumber == 1)
+                    {
+                        healthSlider = healthSliderOptions[12];
+                    }
+
+                    else if (playerNumber == 2)
+                    {
+                        healthSlider = healthSliderOptions[14];
+                    }
+                    break;
+            }
+        }
+
+        else if (Controller_playersMenu.getPlayerCount() == 3)
+        {
+            switch (LoadoutManager1.getAnimal(playerNumber))
+            {
+                case 0:
+                    if (playerNumber == 1)
+                    {
+                        healthSlider = healthSliderOptions[1];
+                    }
+
+                    else if (playerNumber == 2)
+                    {
+                        healthSlider = healthSliderOptions[3];
+                    }
+
+                    else if (playerNumber == 3)
+                    {
+                        healthSlider = healthSliderOptions[4];
+                    }
+                    break;
+
+                case 1:
+                    if (playerNumber == 1)
+                    {
+                        healthSlider = healthSliderOptions[7];
+                    }
+
+                    else if (playerNumber == 2)
+                    {
+                        healthSlider = healthSliderOptions[9];
+                    }
+
+                    else if (playerNumber == 3)
+                    {
+                        healthSlider = healthSliderOptions[10];
+                    }
+                    break;
+
+                case 2:
+                    if (playerNumber == 1)
+                    {
+                        healthSlider = healthSliderOptions[13];
+                    }
+
+                    else if (playerNumber == 2)
+                    {
+                        healthSlider = healthSliderOptions[15];
+                    }
+
+                    else if (playerNumber == 3)
+                    {
+                        healthSlider = healthSliderOptions[16];
+                    }
+                    break;
+            }
+        }
+
+        else if (Controller_playersMenu.getPlayerCount() == 4)
+        {
+            switch (LoadoutManager1.getAnimal(playerNumber))
+            {
+                case 0:
+                    if (playerNumber == 1)
+                    {
+                        healthSlider = healthSliderOptions[1];
+                    }
+
+                    else if (playerNumber == 2)
+                    {
+                        healthSlider = healthSliderOptions[3];
+                    }
+
+                    else if (playerNumber == 3)
+                    {
+                        healthSlider = healthSliderOptions[4];
+                    }
+
+                    else if (playerNumber == 3)
+                    {
+                        healthSlider = healthSliderOptions[5];
+                    }
+                    break;
+
+                case 1:
+                    if (playerNumber == 1)
+                    {
+                        healthSlider = healthSliderOptions[7];
+                    }
+
+                    else if (playerNumber == 2)
+                    {
+                        healthSlider = healthSliderOptions[9];
+                    }
+
+                    else if (playerNumber == 3)
+                    {
+                        healthSlider = healthSliderOptions[10];
+                    }
+
+                    else if (playerNumber == 3)
+                    {
+                        healthSlider = healthSliderOptions[11];
+                    }
+                    break;
+
+                case 2:
+                    if (playerNumber == 1)
+                    {
+                        healthSlider = healthSliderOptions[13];
+                    }
+
+                    else if (playerNumber == 2)
+                    {
+                        healthSlider = healthSliderOptions[15];
+                    }
+
+                    else if (playerNumber == 3)
+                    {
+                        healthSlider = healthSliderOptions[16];
+                    }
+
+                    else if (playerNumber == 3)
+                    {
+                        healthSlider = healthSliderOptions[17];
+                    }
+                    break;
+            }
+        }
+    }
+
     public void setChariotStats(float _defense, int _hitboxSize)
     {
         defense = _defense;
@@ -99,5 +275,7 @@ public class Player_Controller : MonoBehaviour
     public void setPlacement(int place) { placement = place; }
     public static int getPlayerNumber() { return playerNumber; }
     public int getPlayerNumberN() { return playerNumberN; }
+
+    public void setUpSlider(Slider _healthSlider) { healthSlider = _healthSlider; }
 
 }
