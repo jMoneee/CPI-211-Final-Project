@@ -4449,7 +4449,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795922098e4b5d5429b86994642fe435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  theChariot: {fileID: 0}
   selectedChariot: 0
+  chariotDefense: 0
+  hitboxSize: 0
+  player: {fileID: 0}
 --- !u!114 &114245247544649330
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4495,7 +4499,11 @@ MonoBehaviour:
   currentHealth: 0
   healthBoost: 30
   damage: 30
+  defense: 0
+  swingTimer: 0
+  hitboxSize: 0
   placement: 0
+  playerNumberN: 0
   healthSlider: {fileID: 114733513131421124}
   staminaSlider: {fileID: 114291190956533260}
   animal: {fileID: 0}
@@ -4637,6 +4645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6361aa2e23c132143a08a4650a91eeb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  theHorse: {fileID: 0}
   selectedHorse: 0
 --- !u!114 &114434157149588830
 MonoBehaviour:
