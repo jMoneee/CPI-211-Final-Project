@@ -95,7 +95,8 @@ public class AnimalController : MonoBehaviour
             {
                 IngameSoundManager.PlaySound("pickup");
                 GetComponentInParent<Player_Controller>().Heal();
-                Destroy(other.gameObject);
+                StartCoroutine(tempDestroy(other.gameObject, 5));
+                // Destroy(other.gameObject);
             }
 
         }
@@ -104,7 +105,8 @@ public class AnimalController : MonoBehaviour
             IngameSoundManager.PlaySound("pickup");
             Debug.Log("Speed Boost activated");
             speedBoostTimer += 10;
-            Destroy(other.gameObject);
+            StartCoroutine(tempDestroy(other.gameObject, 5));
+            //Destroy(other.gameObject);
         }
     }
 
@@ -125,6 +127,15 @@ public class AnimalController : MonoBehaviour
             //fill in values for wolf
         }
     }
+    IEnumerator tempDestroy(GameObject obj, float respawnTime)
+    {
+        obj.SetActive(false);
+        yield return new WaitForSeconds(respawnTime);
+        obj.SetActive(true);
+        
+
+    }
+    
 }
 
 
