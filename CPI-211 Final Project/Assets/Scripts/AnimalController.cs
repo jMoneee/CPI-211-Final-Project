@@ -41,6 +41,9 @@ public class AnimalController : MonoBehaviour
     {
         LoadoutUpdate();
 
+        if (this.transform.position.y <= -30)
+        { this.transform.parent.GetComponentInParent<Player_Controller>().Die(); }
+
         //Debug.Log("Speed timer is at: " + speedBoostTimer);
         if (speedBoostTimer >= 0)
         {

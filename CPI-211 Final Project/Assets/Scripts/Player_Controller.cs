@@ -74,7 +74,7 @@ public class Player_Controller : MonoBehaviour
         }
     }
 
-    private void Die()
+    public void Die()
     {
         setPlacement(GameManager_colosseum.getCurrentPlayers());
         this.gameObject.SetActive(false);

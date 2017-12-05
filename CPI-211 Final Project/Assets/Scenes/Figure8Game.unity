@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb183a71aef01d9489bafe7d8ac3237c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 4481377160768542, guid: 110a81a6086d1194b84372b72f55398c,
+  playerPrefab: {fileID: 4598686013875424, guid: 110a81a6086d1194b84372b72f55398c,
     type: 2}
 --- !u!4 &421764045
 Transform:
@@ -201,6 +201,10 @@ Prefab:
     - target: {fileID: 400000, guid: 459c13fe43825974e8bc11ed4cac9e54, type: 3}
       propertyPath: m_LocalScale.z
       value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 459c13fe43825974e8bc11ed4cac9e54, type: 3}
+      propertyPath: m_TagString
+      value: Lava
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 459c13fe43825974e8bc11ed4cac9e54, type: 3}
