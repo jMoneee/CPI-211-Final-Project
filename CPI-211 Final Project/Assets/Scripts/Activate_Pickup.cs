@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Activate_Pickup : MonoBehaviour {
 
-    private float timer;
-	// Use this for initialization
-	void Start ()
+    public float timer;
+    // Use this for initialization
+    void Start()
     {
+        this.transform.Rotate(new Vector3(90, 0));
         timer = 5f;
 	}
 	
@@ -22,9 +23,9 @@ public class Activate_Pickup : MonoBehaviour {
 
     void setTag()
     {
-        if (this.gameObject.name == "caltrops_deployed")
+        if (this.gameObject.name == "caltrops_deployed(Clone)")
             this.gameObject.tag = "Caltrops_Deployed";
-        else if (this.gameObject.name == "net_deployed")
+        else if (this.gameObject.name == "net_deployed(Clone)")
             this.gameObject.tag = "Net_Deployed";
     }
 }

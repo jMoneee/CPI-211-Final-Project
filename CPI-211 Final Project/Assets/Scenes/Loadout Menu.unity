@@ -582,7 +582,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Horses
+  m_Text: Bear
 --- !u!222 &32640192
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -822,11 +822,9 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Horses
+    - m_Text: Bear
       m_Image: {fileID: 0}
-    - m_Text: Bears
-      m_Image: {fileID: 0}
-    - m_Text: Wolves
+    - m_Text: Wolf
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1286,7 +1284,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Horses
+  m_Text: Bear
 --- !u!222 &73095119
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1941,11 +1939,9 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Horses
+    - m_Text: Bear
       m_Image: {fileID: 0}
-    - m_Text: Bears
-      m_Image: {fileID: 0}
-    - m_Text: Wolves
+    - m_Text: Wolf
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3592,7 +3588,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Horses
+  m_Text: Bear
 --- !u!222 &249076845
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9689,7 +9685,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Horses
+  m_Text: Bear
 --- !u!222 &680580918
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11941,11 +11937,9 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Horses
+    - m_Text: Bear
       m_Image: {fileID: 0}
-    - m_Text: Bears
-      m_Image: {fileID: 0}
-    - m_Text: Wolves
+    - m_Text: Wolf
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -14119,7 +14113,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Horses
+  m_Text: Bear
 --- !u!222 &933720425
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16228,11 +16222,9 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Horses
+    - m_Text: Bear
       m_Image: {fileID: 0}
-    - m_Text: Bears
-      m_Image: {fileID: 0}
-    - m_Text: Wolves
+    - m_Text: Wolf
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -16635,11 +16627,9 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Horses
+    - m_Text: Bear
       m_Image: {fileID: 0}
-    - m_Text: Bears
-      m_Image: {fileID: 0}
-    - m_Text: Wolves
+    - m_Text: Wolf
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -19606,11 +19596,9 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Horses
+    - m_Text: Bear
       m_Image: {fileID: 0}
-    - m_Text: Bears
-      m_Image: {fileID: 0}
-    - m_Text: Wolves
+    - m_Text: Wolf
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -21129,7 +21117,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Horses
+  m_Text: Bear
 --- !u!222 &1315875629
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22243,11 +22231,9 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Horses
+    - m_Text: Bear
       m_Image: {fileID: 0}
-    - m_Text: Bears
-      m_Image: {fileID: 0}
-    - m_Text: Wolves
+    - m_Text: Wolf
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -23042,11 +23028,9 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Horses
+    - m_Text: Bear
       m_Image: {fileID: 0}
-    - m_Text: Bears
-      m_Image: {fileID: 0}
-    - m_Text: Wolves
+    - m_Text: Wolf
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -24807,7 +24791,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Horses
+  m_Text: Bear
 --- !u!222 &1565645364
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -26569,7 +26553,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Horses
+  m_Text: Bear
 --- !u!222 &1666074484
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28818,11 +28802,9 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Horses
+    - m_Text: Bear
       m_Image: {fileID: 0}
-    - m_Text: Bears
-      m_Image: {fileID: 0}
-    - m_Text: Wolves
+    - m_Text: Wolf
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:

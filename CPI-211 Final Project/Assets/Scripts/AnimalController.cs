@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AnimalController : MonoBehaviour
 {
@@ -53,12 +54,22 @@ public class AnimalController : MonoBehaviour
             switch (deployablePickup)
             {
                 case 1: //net picked up
-                    Object netDeployed = Instantiate(net, new Vector3(this.transform.position.x, 8.5f, this.transform.position.z), Quaternion.identity);
+                    if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Colosseum Game"))
+                        { Object netDeployed = Instantiate(net, new Vector3(this.transform.position.x, 8.5f, this.transform.position.z), Quaternion.identity); }
+                    
+                    else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Colosseum Game"))
+                        { Object netDeployed = Instantiate(net, new Vector3(this.transform.position.x, 36f, this.transform.position.z), Quaternion.identity); }
+
                     deployablePickup = 0;
                     break;
 
                 case 2: //caltrops picked up
-                    Object caltropsDeplyed = Instantiate(caltrops, new Vector3(this.transform.position.x, -4.5f, this.transform.position.z), Quaternion.identity);
+                    if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Colosseum Game"))
+                    { Object netDeployed = Instantiate(caltrops, new Vector3(this.transform.position.x, 8.5f, this.transform.position.z), Quaternion.identity); }
+
+                    else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Colosseum Game"))
+                    { Object netDeployed = Instantiate(caltrops, new Vector3(this.transform.position.x, 49f, this.transform.position.z), Quaternion.identity); }
+
                     deployablePickup = 0;
                     break;
             }

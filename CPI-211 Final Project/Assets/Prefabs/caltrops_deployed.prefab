@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114087145706459726}
   m_Layer: 0
   m_Name: caltrops_deployed
-  m_TagString: Caltrops_Deployed
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,3 +105,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b133f6f65b7674b9956084c83b0360, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: 0
