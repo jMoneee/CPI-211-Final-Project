@@ -25,6 +25,9 @@ public class Player_Controller : MonoBehaviour
     public int playerNumberN;
     public static int playerNumber;
 
+    public int deathCam;
+    public GameObject deathCams;
+
     public Slider healthSlider;//health bar
 
     public GameObject animal;
@@ -78,6 +81,7 @@ public class Player_Controller : MonoBehaviour
     public void Die()
     {
         setPlacement(GameManager_colosseum.getCurrentPlayers());
+        deathCams.transform.GetChild(deathCam).gameObject.SetActive(true);
         this.gameObject.SetActive(false);
     }
 
@@ -109,5 +113,7 @@ public class Player_Controller : MonoBehaviour
     public int getPlayerNumberN() { return playerNumberN; }
 
     public void setUpSlider(Slider _healthSlider) { healthSlider = _healthSlider; }
+    public void getDeathCam(int cam) { deathCam = cam; }
+    public void setDeathCams(GameObject cams) { deathCams = cams; }
 
 }

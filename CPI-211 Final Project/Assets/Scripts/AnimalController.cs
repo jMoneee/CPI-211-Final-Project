@@ -57,18 +57,18 @@ public class AnimalController : MonoBehaviour
                     if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Colosseum Game"))
                         { Object netDeployed = Instantiate(net, new Vector3(this.transform.position.x, 8.5f, this.transform.position.z), Quaternion.identity); }
                     
-                    else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Colosseum Game"))
-                        { Object netDeployed = Instantiate(net, new Vector3(this.transform.position.x, 36f, this.transform.position.z), Quaternion.identity); }
+                    else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Figure8Game"))
+                        { Object netDeployed = Instantiate(net, new Vector3(this.transform.position.x, 49f, this.transform.position.z), Quaternion.identity); }
 
                     deployablePickup = 0;
                     break;
 
                 case 2: //caltrops picked up
                     if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Colosseum Game"))
-                    { Object netDeployed = Instantiate(caltrops, new Vector3(this.transform.position.x, 8.5f, this.transform.position.z), Quaternion.identity); }
+                    { Object netDeployed = Instantiate(caltrops, new Vector3(this.transform.position.x, -4.2f, this.transform.position.z), Quaternion.identity); }
 
-                    else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Colosseum Game"))
-                    { Object netDeployed = Instantiate(caltrops, new Vector3(this.transform.position.x, 49f, this.transform.position.z), Quaternion.identity); }
+                    else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Figure8Game"))
+                    { Object netDeployed = Instantiate(caltrops, new Vector3(this.transform.position.x, 36f, this.transform.position.z), Quaternion.identity); }
 
                     deployablePickup = 0;
                     break;

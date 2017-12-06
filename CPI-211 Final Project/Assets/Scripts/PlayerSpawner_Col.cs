@@ -7,6 +7,7 @@ public class PlayerSpawner_Col : MonoBehaviour {
     static int players;
     public Transform playerPrefab;
     private Vector3 spawnLocation;
+    public GameObject deathCams;
 
     // Use this for initialization
     void Start()
@@ -36,5 +37,7 @@ public class PlayerSpawner_Col : MonoBehaviour {
             Object instanceObj = Instantiate(playerPrefab, spawnLocation, Quaternion.identity);
             instanceObj.name = "Player " + i;
         }
+
+        if (players == 3) { deathCams.transform.GetChild(5).gameObject.SetActive(true); }
     }
 }

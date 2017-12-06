@@ -9,6 +9,7 @@ public class GameManager_colosseum : MonoBehaviour
     public GameObject[] startingListOfPlayers;
     public static int[] playerScoreList;
     public GameObject[] listOfPlayers;
+    public GameObject deathCams;
 
     // Update is called once per frame
     void Update()
@@ -19,6 +20,11 @@ public class GameManager_colosseum : MonoBehaviour
             currentPlayers = startingListOfPlayers.Length;
             playerScoreList = new int[startingListOfPlayers.Length];
         }
+        for (int i = 0; i < listOfPlayers.Length; i++)
+        {
+            listOfPlayers[i].GetComponent<Player_Controller>().setDeathCams(deathCams);
+        }
+
         listOfPlayers = GameObject.FindGameObjectsWithTag("Player");
         currentPlayers = listOfPlayers.Length;
 
