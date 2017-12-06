@@ -16,10 +16,15 @@ public class AnimalController : MonoBehaviour
     public GameObject wheel_left;
     public GameObject wheel_right;
     private float speedBoostTimer;
+    private float speedReductTimer;
     public AudioSource musicPlayer;
+    public GameObject net;
+    public GameObject caltrops;
 
     Animator animator;
 
+    public int deployablePickup; //used to determine when player has pickup and what pickup they have
+    // 0 indicates no pickup, 1 indicates net, 2 indicates caltrops
 
     public string player;
 
@@ -39,17 +44,24 @@ public class AnimalController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        LoadoutUpdate();
-
         //Debug.Log("Speed timer is at: " + speedBoostTimer);
-        if (speedBoostTimer >= 0)
+        CheckSpeedBoost();
+        CheckSpeedReduction();
+
+        if (Input.GetButton("P" + this.transform.parent.GetComponentInParent<Player_Controller>().getPlayerNumberN() + "_Fire3") && deployablePickup != 0)
         {
-            speedBoostTimer -= Time.deltaTime;
-            animal_speed = base_speed * 5;
-        }
-        else if(speedBoostTimer <= 0)
-        {
-            animal_speed = base_speed;
+            switch (deployablePickup)
+            {
+                case 1: //net picked up
+                    Object netDeployed = Instantiate(net, new Vector3(this.transform.position.x, 8.5f, this.transform.position.z), Quaternion.identity);
+                    deployablePickup = 0;
+                    break;
+
+                case 2: //caltrops picked up
+                    Object caltropsDeplyed = Instantiate(caltrops, new Vector3(this.transform.position.x, -4.5f, this.transform.position.z), Quaternion.identity);
+                    deployablePickup = 0;
+                    break;
+            }
         }
     }
 
@@ -108,25 +120,64 @@ public class AnimalController : MonoBehaviour
             StartCoroutine(tempDestroy(other.gameObject, 5));
             //Destroy(other.gameObject);
         }
+
+        if (other.CompareTag("Net_Pickup") && deployablePickup != 0)
+        {
+            IngameSoundManager.PlaySound("pickup");
+            Debug.Log("Net picked up");
+            deployablePickup = 1;
+            StartCoroutine(tempDestroy(other.gameObject, 5));
+        }
+
+        if (other.CompareTag("Net_Deployed"))
+        {
+            Debug.Log("Netted!");
+            speedReductTimer += 10;
+            Destroy(other.gameObject);
+        }
+
+        if (other.CompareTag("Caltrops_Pickup") && deployablePickup != 0)
+        {
+            IngameSoundManager.PlaySound("pickup");
+            Debug.Log("Caltrops picked up");
+            deployablePickup = 2;
+            StartCoroutine(tempDestroy(other.gameObject, 5));
+        }
+
+        if (other.CompareTag("Caltrops_Deployed"))
+        {
+            Debug.Log("Caltrops run over!");
+            this.transform.parent.GetComponentInParent<Player_Controller>().reduceHealth(15);
+            Destroy(other.gameObject);
+        }
     }
 
-    void LoadoutUpdate()
+    void CheckSpeedBoost()
     {
-        if (this.gameObject.GetComponent<HorseManager>().returnHorse() == 0)
+        if (speedBoostTimer >= 0)
         {
-            //fill in values for horse
+            speedBoostTimer -= Time.deltaTime;
+            animal_speed = base_speed * 5;
         }
-
-        else if (this.gameObject.GetComponent<HorseManager>().returnHorse() == 1)
+        else if (speedBoostTimer <= 0)
         {
-            //fill in values for bear
-        }
-
-        else if (this.gameObject.GetComponent<HorseManager>().returnHorse() == 2)
-        {
-            //fill in values for wolf
+            animal_speed = base_speed;
         }
     }
+
+    void CheckSpeedReduction()
+    {
+        if (speedReductTimer >= 0)
+        {
+            speedReductTimer -= Time.deltaTime;
+            animal_speed = 5;
+        }
+        else if (speedReductTimer <= 0)
+        {
+            animal_speed = base_speed;
+        }
+    }
+
     IEnumerator tempDestroy(GameObject obj, float respawnTime)
     {
         obj.SetActive(false);
@@ -136,6 +187,7 @@ public class AnimalController : MonoBehaviour
 
     }
     
+    public int getPickup() { return deployablePickup; }
 }
 
 
