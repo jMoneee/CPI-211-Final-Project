@@ -21,10 +21,10 @@ public class Camera_Controller : MonoBehaviour
     {
         target = this.transform.parent.gameObject;
 
-        if (this.transform.parent.name == "Player 1") { player = "P1K"; }
-        if (this.transform.parent.name == "Player 2") { player = "P2"; }
-        if (this.transform.parent.name == "Player 3") { player = "P3"; }
-        if (this.transform.parent.name == "Player 4") { player = "P4"; }
+        if (this.transform.parent.parent.parent.parent.name == "Player 1") { player = "P1K"; }
+        if (this.transform.parent.parent.parent.parent.name == "Player 2") { player = "P2"; }
+        if (this.transform.parent.parent.parent.parent.name == "Player 3") { player = "P3"; }
+        if (this.transform.parent.parent.parent.parent.name == "Player 4") { player = "P4"; }
 
         //offset = target.transform.position - transform.position;
         cameraStartAngle = 0;

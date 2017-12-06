@@ -1,30 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PickupSprites : MonoBehaviour
 {
-    public GameObject[] spriteList;
+    public Sprite[] spriteList;
     public int currentSprite;
-	// Use this for initialization
-	void Start ()
+    public Image pickupImage;
+
+   void Start ()
+   {
+        currentSprite = 0;
+        pickupImage = this.GetComponent<Image>();
+   }
+    
+    void LateUpdate()
     {
-		for (int i = 0; i < spriteList.Length; i++)
-        { spriteList[i].gameObject.SetActive(false); }
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-        currentSprite = this.transform.parent.parent.parent.GetComponentInParent<AnimalController>().getPickup();
+        currentSprite = this.transform.parent.parent.parent.parent.parent.GetComponent<AnimalController>().getPickup()-1;
 
         if (currentSprite != 0)
-        { spriteList[currentSprite+1].gameObject.SetActive(true); }
+        {
+            pickupImage.sprite = spriteList[currentSprite];
+            pickupImage.gameObject.SetActive(true);
+        }
 
         else
-        {
-            for (int i = 0; i < spriteList.Length; i++)
-            { spriteList[i].gameObject.SetActive(false); }
-        }
-	}
+        { pickupImage.gameObject.SetActive(false); }
+    }
 }
