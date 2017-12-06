@@ -116,12 +116,12 @@ public class AnimalController : MonoBehaviour
         {
             IngameSoundManager.PlaySound("pickup");
             Debug.Log("Speed Boost activated");
-            speedBoostTimer += 10;
+            speedBoostTimer = 10;
             StartCoroutine(tempDestroy(other.gameObject, 5));
             //Destroy(other.gameObject);
         }
 
-        if (other.CompareTag("Net_Pickup") && deployablePickup != 0)
+        if (other.CompareTag("Net_Pickup"))
         {
             IngameSoundManager.PlaySound("pickup");
             Debug.Log("Net picked up");
@@ -132,11 +132,11 @@ public class AnimalController : MonoBehaviour
         if (other.CompareTag("Net_Deployed"))
         {
             Debug.Log("Netted!");
-            speedReductTimer += 10;
+            speedReductTimer = 5;
             Destroy(other.gameObject);
         }
 
-        if (other.CompareTag("Caltrops_Pickup") && deployablePickup != 0)
+        if (other.CompareTag("Caltrops_Pickup"))
         {
             IngameSoundManager.PlaySound("pickup");
             Debug.Log("Caltrops picked up");
@@ -172,7 +172,7 @@ public class AnimalController : MonoBehaviour
             speedReductTimer -= Time.deltaTime;
             animal_speed = 5;
         }
-        else if (speedReductTimer <= 0)
+        else if (speedReductTimer <= 0 && speedBoostTimer <= 0)
         {
             animal_speed = base_speed;
         }

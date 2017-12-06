@@ -98,6 +98,9 @@ public class Player_Controller : MonoBehaviour
     public float getDamage()//returns damage
     { return damage; }
 
+    public float getDefense()
+    { return defense; }
+
     public void reduceHealth(int reduction) { currentHealth -= reduction; }
 
     public int getPlacement() { return placement; }
