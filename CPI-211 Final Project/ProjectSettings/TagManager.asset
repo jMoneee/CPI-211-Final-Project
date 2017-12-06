@@ -10,6 +10,10 @@ TagManager:
   - Chariot
   - Speed
   - Music
+  - Net_Pickup
+  - Net_Deployed
+  - Caltrops_Pickup
+  - Caltrops_Deployed
   layers:
   - Default
   - TransparentFX
