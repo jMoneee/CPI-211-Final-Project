@@ -74,6 +74,7 @@ public class AnimalController : MonoBehaviour
         {
             animator.SetBool("Still", true);
             animator.SetBool("Forward", false);
+            //GetComponent<Animation>().CrossFade("(new)horse_still");
         }
         if (accelerate >= 0)
         {
@@ -88,8 +89,15 @@ public class AnimalController : MonoBehaviour
                 wheel_left.transform.Rotate(0, 0, 10 * (animal_speed) * (Time.deltaTime));
                 animator.SetBool("Forward", true);
                 animator.SetBool("Still", false);
+               // GetComponent<Animation>().CrossFade("horse_run");
             }
+            else
+            {
+               // GetComponent<Animation>().CrossFade("(new)horse_still");
+            }
+
         }
+       
         //  else if (accelerate <0)           reverse direction was causing animal to be flipped. I disabled it, but left in case we decide to bring it back
         //{
         //  var moveDist = accelerate * animal_speed * Time.deltaTime;
