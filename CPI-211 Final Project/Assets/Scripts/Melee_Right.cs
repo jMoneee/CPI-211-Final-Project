@@ -52,7 +52,7 @@ public class Melee_Right : MonoBehaviour
            // Debug.Log(collision);
             if (active)
             {
-               // Debug.Log("Right Active!");
+                // Debug.Log("Right Active!");
 
                 if (collision.CompareTag("Player"))
                 {
@@ -61,7 +61,7 @@ public class Melee_Right : MonoBehaviour
                     Debug.Log("DAMAGE!! YEAH!");
                     SoundManager.PlaySound("damage");
                 }
-                else if (collision.CompareTag("Horse") || collision.CompareTag("Chariot"))
+                else if ((collision.CompareTag("Horse")) || (collision.CompareTag("Chariot")))
                 {
                     damageDealt = (int)damage - (int)collision.GetComponentInParent<Player_Controller>().getDefense();
                     collision.GetComponentInParent<Player_Controller>().currentHealth -= damageDealt; //for now I guess

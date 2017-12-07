@@ -53,14 +53,14 @@ public class Melee_Left : MonoBehaviour
             if (active)
                 {
                 // Debug.Log("Left Active!");
-                if (collision.CompareTag("Player"))
+                if (collision.CompareTag("Player") )
                 {
                     damageDealt = (int)damage - (int)collision.GetComponent<Player_Controller>().getDefense();
                     collision.GetComponent<Player_Controller>().currentHealth -= damageDealt; //for now I guess
                     Debug.Log("DAMAGE!! YEAH!");
                     SoundManager.PlaySound("damage");
                 }
-                else if (collision.CompareTag("Horse") || collision.CompareTag("Chariot"))
+                else if ((collision.CompareTag("Horse") ) || (collision.CompareTag("Chariot") ))
                 {
                     damageDealt = (int)damage - (int)collision.GetComponentInParent<Player_Controller>().getDefense();
                     collision.GetComponentInParent<Player_Controller>().currentHealth -= damageDealt; //for now I guess
