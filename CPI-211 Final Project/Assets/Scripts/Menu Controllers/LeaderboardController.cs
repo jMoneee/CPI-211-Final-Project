@@ -33,7 +33,7 @@ public class LeaderboardController : MonoBehaviour
             { second.text = "2nd Place: Player " + (i + 1); }
 
             if (playerList[i] == 3)
-            { third.text = "3rd Pl=ace: Player " + (i + 1); }
+            { third.text = "3rd Place: Player " + (i + 1); }
 
             if (playerList[i] == 4)
             { fourth.text = "4th Place: Player " + (i + 1); }
