@@ -161,6 +161,10 @@ public class AnimalController : MonoBehaviour
             this.transform.parent.GetComponentInParent<Player_Controller>().reduceHealth(15);
             Destroy(other.gameObject);
         }
+        if (other.CompareTag("KillFloor"))
+        {
+            this.transform.parent.GetComponentInParent<Player_Controller>().reduceHealth(1000);
+        }
     }
 
     void CheckSpeedBoost()
