@@ -13,6 +13,7 @@ public class AnimalController : MonoBehaviour
     public float animal_speed;
     public float base_speed;
     public float turn_speed;
+    public float base_turn_speed;
     private Rigidbody myRigidBody;
     public GameObject wheel_left;
     public GameObject wheel_right;
@@ -44,6 +45,7 @@ public class AnimalController : MonoBehaviour
         speedBoostTimer = 0f;
         base_speed = animal_speed;
         animator = GetComponent<Animator>();
+        base_turn_speed = turn_speed;
     }
 
     // Update is called once per frame
@@ -201,10 +203,13 @@ public class AnimalController : MonoBehaviour
         {
             speedBoostTimer -= Time.deltaTime;
             animal_speed = base_speed * 5;
+            //turn_speed = base_turn_speed * 5;
+
         }
         else if (speedBoostTimer <= 0)
         {
             animal_speed = base_speed;
+            //turn_speed = base_turn_speed;
         }
     }
 

@@ -241,6 +241,7 @@ MonoBehaviour:
   animal_speed: 40
   base_speed: 0
   turn_speed: 70
+  base_turn_speed: 0
   wheel_left: {fileID: 597670807}
   wheel_right: {fileID: 1527073239}
   shield: {fileID: 0}
@@ -1234,6 +1235,7 @@ MonoBehaviour:
   animal_speed: 40
   base_speed: 0
   turn_speed: 70
+  base_turn_speed: 0
   wheel_left: {fileID: 1353646965}
   wheel_right: {fileID: 578426385}
   shield: {fileID: 0}
