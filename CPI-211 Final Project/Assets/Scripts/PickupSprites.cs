@@ -14,18 +14,10 @@ public class PickupSprites : MonoBehaviour
         currentSprite = 0;
         pickupImage = this.GetComponent<Image>();
    }
-    
+
     void LateUpdate()
     {
-        currentSprite = this.transform.parent.parent.parent.parent.parent.GetComponent<AnimalController>().getPickup()-1;
-
-        if (currentSprite != 0)
-        {
-            pickupImage.sprite = spriteList[currentSprite];
-            pickupImage.gameObject.SetActive(true);
-        }
-
-        else
-        { pickupImage.gameObject.SetActive(false); }
+        currentSprite = this.transform.parent.parent.parent.parent.parent.GetComponent<AnimalController>().getPickup();
+        pickupImage.sprite = spriteList[currentSprite];
     }
 }
