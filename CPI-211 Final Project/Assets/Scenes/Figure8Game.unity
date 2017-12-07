@@ -308,8 +308,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb183a71aef01d9489bafe7d8ac3237c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 4769990607643072, guid: 813bd62060219544d9b3b200b62b8aa1,
+  playerPrefab: {fileID: 4690309270677338, guid: 813bd62060219544d9b3b200b62b8aa1,
     type: 2}
+  deathCams: {fileID: 1257386646}
 --- !u!4 &421764045
 Transform:
   m_ObjectHideFlags: 0
@@ -419,6 +420,53 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 459c13fe43825974e8bc11ed4cac9e54, type: 3}
   m_IsPrefabParent: 0
+--- !u!1001 &1257386645
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4064100970712766, guid: 9b40b4412e402d241a429a90123c41f6, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -151
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064100970712766, guid: 9b40b4412e402d241a429a90123c41f6, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064100970712766, guid: 9b40b4412e402d241a429a90123c41f6, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064100970712766, guid: 9b40b4412e402d241a429a90123c41f6, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064100970712766, guid: 9b40b4412e402d241a429a90123c41f6, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064100970712766, guid: 9b40b4412e402d241a429a90123c41f6, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064100970712766, guid: 9b40b4412e402d241a429a90123c41f6, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064100970712766, guid: 9b40b4412e402d241a429a90123c41f6, type: 2}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 9b40b4412e402d241a429a90123c41f6, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &1257386646 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1238713873121648, guid: 9b40b4412e402d241a429a90123c41f6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1257386645}
 --- !u!1001 &1432131328
 Prefab:
   m_ObjectHideFlags: 0
@@ -722,6 +770,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingListOfPlayers: []
   listOfPlayers: []
+  deathCams: {fileID: 1257386646}
 --- !u!4 &1790160851
 Transform:
   m_ObjectHideFlags: 0
