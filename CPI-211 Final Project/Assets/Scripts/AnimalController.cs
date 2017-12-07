@@ -18,6 +18,10 @@ public class AnimalController : MonoBehaviour
     public GameObject wheel_right;
     private float speedBoostTimer;
     private float speedReductTimer;
+    private float shieldTimer;
+    public GameObject shield;
+    public bool invincible;
+    private float player_defense;
     public AudioSource musicPlayer;
     public GameObject net;
     public GameObject caltrops;
@@ -48,6 +52,17 @@ public class AnimalController : MonoBehaviour
         //Debug.Log("Speed timer is at: " + speedBoostTimer);
         CheckSpeedBoost();
         CheckSpeedReduction();
+        if (shieldTimer > 0)
+        {
+            invincible = true;
+            shieldTimer -= Time.deltaTime;
+            GetComponentInParent<Player_Controller>().defense = 200f;
+        }
+        else
+        {
+            invincible = false;
+            GetComponentInParent<Player_Controller>().defense = player_defense;
+        }
 
         if (Input.GetButton("P" + this.transform.parent.GetComponentInParent<Player_Controller>().getPlayerNumberN() + "_Fire3") && deployablePickup != 0)
         {
@@ -70,6 +85,11 @@ public class AnimalController : MonoBehaviour
                     else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Figure8Game"))
                     { Object netDeployed = Instantiate(caltrops, new Vector3(this.transform.position.x, 36f, this.transform.position.z), Quaternion.identity); }
 
+                    deployablePickup = 0;
+                    break;
+                case 3: //shield picked up
+                    Object shieldDeployed = Instantiate(shield, this.transform, false);
+                    shieldTimer += 15f;
                     deployablePickup = 0;
                     break;
             }
@@ -95,10 +115,11 @@ public class AnimalController : MonoBehaviour
             transform.Translate(Vector3.forward * moveDist);
             if (accelerate > 0)
             {
-                wheel_right.transform.Rotate(0, 0, -10 * animal_speed * Time.deltaTime);
-                wheel_left.transform.Rotate(0, 0, 10 * (animal_speed) * (Time.deltaTime));
                 animator.SetBool("Forward", true);
                 animator.SetBool("Still", false);
+                wheel_right.transform.Rotate(0, 0, -10 * animal_speed * Time.deltaTime);
+                wheel_left.transform.Rotate(0, 0, 10 * (animal_speed) * (Time.deltaTime));
+                
             }
         }
         //  else if (accelerate <0)           reverse direction was causing animal to be flipped. I disabled it, but left in case we decide to bring it back
@@ -164,6 +185,13 @@ public class AnimalController : MonoBehaviour
         if (other.CompareTag("KillFloor"))
         {
             this.transform.parent.GetComponentInParent<Player_Controller>().reduceHealth(1000);
+        }
+        if (other.CompareTag("Shield_pickup"))
+        {
+            IngameSoundManager.PlaySound("pickup");
+            Debug.Log("Shield picked up");
+            deployablePickup = 3;
+            StartCoroutine(tempDestroy(other.gameObject, 5));
         }
     }
 

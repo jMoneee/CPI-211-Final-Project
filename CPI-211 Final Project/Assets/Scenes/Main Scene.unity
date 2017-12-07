@@ -108,12 +108,6 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &90834844 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114070646882227646, guid: b1a93ce035b83f84f86edaa146efc498,
-    type: 2}
-  m_PrefabInternal: {fileID: 1688594764}
-  m_Script: {fileID: -113659843, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!114 &108748508 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114612984584364642, guid: b1a93ce035b83f84f86edaa146efc498,
@@ -245,9 +239,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animal_speed: 40
+  base_speed: 0
   turn_speed: 70
   wheel_left: {fileID: 597670807}
   wheel_right: {fileID: 1527073239}
+  shield: {fileID: 0}
+  invincible: 0
+  musicPlayer: {fileID: 0}
+  net: {fileID: 0}
+  caltrops: {fileID: 0}
+  deployablePickup: 0
   player: P1
 --- !u!54 &296735772
 Rigidbody:
@@ -320,8 +321,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1013888644}
-  attackTime: 0
-  weaponSpeed: 8
+  attackSpeed: 0
+  damage: 0
+  damageDealt: 0
+  playerAnimator: {fileID: 0}
+  animatorOptions: []
   playerID: P2
 --- !u!23 &302315699
 MeshRenderer:
@@ -498,11 +502,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!224 &421028541 stripped
-RectTransform:
-  m_PrefabParentObject: {fileID: 224678336662499906, guid: b1a93ce035b83f84f86edaa146efc498,
-    type: 2}
-  m_PrefabInternal: {fileID: 1688594764}
 --- !u!1001 &425339661
 Prefab:
   m_ObjectHideFlags: 0
@@ -828,7 +827,7 @@ Transform:
   m_LocalPosition: {x: 13.831715, y: -0.3391323, z: -16.931572}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 296735770}
+  - {fileID: 1167365923}
   - {fileID: 939610142}
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -863,8 +862,15 @@ MonoBehaviour:
   currentHealth: 0
   healthBoost: 30
   damage: 0
+  defense: 0
+  swingTimer: 0
+  hitboxSize: 0
+  placement: 0
+  playerNumberN: 0
+  deathCam: 0
+  deathCams: {fileID: 0}
   healthSlider: {fileID: 108748508}
-  staminaSlider: {fileID: 90834844}
+  animal: {fileID: 0}
 --- !u!65 &790469275
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1202,6 +1208,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b1a93ce035b83f84f86edaa146efc498, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &947983919 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 947983918}
 --- !u!1 &986419473 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: e8856a77ef3c31e4191d639503a03a66, type: 3}
@@ -1222,9 +1232,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animal_speed: 40
+  base_speed: 0
   turn_speed: 70
   wheel_left: {fileID: 1353646965}
   wheel_right: {fileID: 578426385}
+  shield: {fileID: 0}
+  invincible: 0
+  musicPlayer: {fileID: 0}
+  net: {fileID: 0}
+  caltrops: {fileID: 0}
+  deployablePickup: 0
   player: P2
 --- !u!54 &986419476
 Rigidbody:
@@ -1289,8 +1306,15 @@ MonoBehaviour:
   currentHealth: 0
   healthBoost: 30
   damage: 0
+  defense: 0
+  swingTimer: 0
+  hitboxSize: 0
+  placement: 0
+  playerNumberN: 0
+  deathCam: 0
+  deathCams: {fileID: 0}
   healthSlider: {fileID: 599879604}
-  staminaSlider: {fileID: 1139003931}
+  animal: {fileID: 0}
 --- !u!114 &1013888646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1313,7 +1337,7 @@ Transform:
   m_LocalPosition: {x: -15, y: -0.3391323, z: -16.931572}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 986419474}
+  - {fileID: 1769117875}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1450,12 +1474,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1139003931 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114070646882227646, guid: b1a93ce035b83f84f86edaa146efc498,
-    type: 2}
-  m_PrefabInternal: {fileID: 947983918}
-  m_Script: {fileID: -113659843, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1001 &1167365922
 Prefab:
   m_ObjectHideFlags: 0
@@ -1518,6 +1536,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e8856a77ef3c31e4191d639503a03a66, type: 3}
   m_IsPrefabParent: 0
+--- !u!4 &1167365923 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1167365922}
 --- !u!1 &1289215517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1548,7 +1570,7 @@ Transform:
   m_LocalPosition: {x: -1.5, y: -10.1, z: -27.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1690534345}
+  - {fileID: 947983919}
   m_Father: {fileID: 2043083606}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1600,7 +1622,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  cameraRotateSpeed: 4
   player: P2
 --- !u!45 &1289215521
 Skybox:
@@ -1839,11 +1860,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b1a93ce035b83f84f86edaa146efc498, type: 2}
   m_IsPrefabParent: 0
---- !u!224 &1690534345 stripped
-RectTransform:
-  m_PrefabParentObject: {fileID: 224678336662499906, guid: b1a93ce035b83f84f86edaa146efc498,
-    type: 2}
-  m_PrefabInternal: {fileID: 947983918}
+--- !u!4 &1688594765 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1688594764}
 --- !u!1 &1757025462
 GameObject:
   m_ObjectHideFlags: 0
@@ -1932,7 +1952,7 @@ Transform:
   m_LocalPosition: {x: -1.5, y: -10.1, z: -27.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 421028541}
+  - {fileID: 1688594765}
   m_Father: {fileID: 351489972}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1948,7 +1968,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  cameraRotateSpeed: 4
   player: P1
 --- !u!45 &1757025469
 Skybox:
@@ -2024,6 +2043,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e8856a77ef3c31e4191d639503a03a66, type: 3}
   m_IsPrefabParent: 0
+--- !u!4 &1769117875 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1769117874}
 --- !u!1 &1878373596
 GameObject:
   m_ObjectHideFlags: 0
@@ -2119,8 +2142,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 790469271}
-  attackTime: 0
-  weaponSpeed: 8
+  attackSpeed: 0
+  damage: 0
+  damageDealt: 0
+  playerAnimator: {fileID: 0}
+  animatorOptions: []
   playerID: P1
 --- !u!1 &1919233675
 GameObject:
@@ -2217,8 +2243,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 790469271}
-  attackTime: 0
-  weaponSpeed: 8
+  attackSpeed: 0
+  damage: 0
+  damageDealt: 0
+  playerAnimator: {fileID: 0}
+  animatorOptions: []
   playerID: P1
 --- !u!1 &1987102165
 GameObject:
@@ -2321,8 +2350,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1013888644}
-  attackTime: 0
-  weaponSpeed: 8
+  attackSpeed: 0
+  damage: 0
+  damageDealt: 0
+  playerAnimator: {fileID: 0}
+  animatorOptions: []
   playerID: P2
 --- !u!23 &2059217427
 MeshRenderer:
