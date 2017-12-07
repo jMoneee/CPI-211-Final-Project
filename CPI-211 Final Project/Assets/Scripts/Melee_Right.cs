@@ -20,7 +20,7 @@ public class Melee_Right : MonoBehaviour
     void Start()
     {
         setWeaponObjects();
-        player = this.transform.parent.parent.parent.gameObject;
+        player = this.transform.parent.parent.parent.parent.parent.parent.gameObject;
         playerID = "P" + player.GetComponent<Player_Controller>().getPlayerNumberN();
 
         active = false;
@@ -102,7 +102,7 @@ public class Melee_Right : MonoBehaviour
 
     void setWeaponObjects()
     {
-        int player = this.transform.parent.parent.GetComponentInParent<Player_Controller>().getPlayerNumberN();
+        int player = this.transform.parent.parent.parent.parent.parent.GetComponentInParent<Player_Controller>().getPlayerNumberN();
         int totalPlayers = Controller_playersMenu.getPlayerCount();
 
         int selectedWeapon = 0;
