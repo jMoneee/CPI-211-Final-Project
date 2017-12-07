@@ -179,7 +179,7 @@ public class AnimalController : MonoBehaviour
         if (other.CompareTag("Caltrops_Deployed"))
         {
             Debug.Log("Caltrops run over!");
-            this.transform.parent.GetComponentInParent<Player_Controller>().reduceHealth(40);
+            this.transform.parent.GetComponentInParent<Player_Controller>().reduceHealth(15);
             Destroy(other.gameObject);
         }
         if (other.CompareTag("KillFloor"))
