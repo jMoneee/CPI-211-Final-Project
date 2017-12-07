@@ -14,6 +14,7 @@ TagManager:
   - Net_Deployed
   - Caltrops_Pickup
   - Caltrops_Deployed
+  - KillFloor
   layers:
   - Default
   - TransparentFX
